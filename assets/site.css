@@ -1,42 +1,49 @@
 /* amirmbaram.com - one stylesheet for every page, English and Persian.
-   Layout after lhpedersen.com: white header that turns dark on scroll,
-   centred page title, white / grey / blue full-width bands. */
+   Layout after lhpedersen.com: white header, centred page title, white / tinted / grey
+   full-width bands. Tuned for easy reading (11 Oct 2026): dark text on light grounds only,
+   lines of about 75 characters, near-black text, regular-weight menu. */
 :root{
   /* Amir's palette ج (control vault, _assets/figure-palette.md): Khatam blue + crimson */
-  --blue:#1B3683;        /* titles, headings, links */
-  --band:#1B3683;        /* the News band */
+  --blue:#1B3683;        /* titles, headings, links, news dates */
   --accent:#B8304F;      /* crimson: current page, hover, the rule under the title */
-  --grey:#E8EBF3;        /* grey bands */
-  --ink:#000000; --ink-2:#2E3A55; --muted:#5A6377;
+  --grey:#E8EBF3;        /* tinted bands */
+  --ink:#1F2940; --ink-2:#2E3A55; --muted:#5A6377;   /* body text: palette navy, darkened */
   --line:#E1E5EF; --line-grey:#CDD3E4;
-  --dark:#13265C;        /* header after scrolling: Khatam blue, darker */
-  --on-dark:#83B8E5;     /* palette sky, for the current page on the dark header */
   --f-en:"Lato",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
   --f-fa:"B Nazanin","BNazanin","Vazirmatn",Tahoma,serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
   --wrap:960px;
+  /* Persian sizes are set for B Nazanin. Visitors without it get Vazirmatn, which looks
+     about a fifth larger at the same size, so their sizes are scaled down; the script in
+     each page's head adds class "bn" to <html> when B Nazanin is installed. */
+  --fs:.83; --fa-lh:1.9;
+  --measure:33em;        /* ~75 characters of Lato */
 }
+html.bn{--fs:1;--fa-lh:2.05}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:#fff;color:var(--ink);font:400 16.5px/1.7 var(--f-en)}
-html[lang="fa"] body{font:400 20.5px/2.05 var(--f-fa)}
+body{margin:0;background:#fff;color:var(--ink);font:400 17px/1.7 var(--f-en)}
+html[lang="fa"] body{font:400 calc(20.5px*var(--fs))/var(--fa-lh) var(--f-fa)}
+html[lang="fa"]{--measure:27em}   /* ~80 Persian characters */
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
 a{color:var(--blue);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 a:hover{color:var(--accent)}
-p{margin:0 0 14px}
+p{margin:0 0 14px;max-width:var(--measure)}
 img{max-width:100%}
-.fa-in{font-family:var(--f-fa);font-size:1.22em;line-height:1;unicode-bidi:isolate}
-.en{font-family:var(--f-mono);font-size:.8em;direction:ltr;unicode-bidi:isolate}
+.fa-in{font-family:var(--f-fa);font-size:calc(1.22em*var(--fs));line-height:1;unicode-bidi:isolate}
+.en{font-family:var(--f-en);font-size:calc(.8em/var(--fs));direction:ltr;unicode-bidi:isolate}   /* Latin words inside Persian text */
 .skip{position:absolute;inset-inline-start:-999px;top:8px;background:#fff;padding:8px 12px;z-index:20}
 .skip:focus{inset-inline-start:8px}
 
-/* ---- header ---- */
-.site-header{position:sticky;top:0;z-index:10;background:#fff;transition:background-color .2s ease,box-shadow .2s ease}
+/* ---- header: stays white; a thin rule appears once the page scrolls ---- */
+.site-header{position:sticky;top:0;z-index:10;background:#fff;transition:box-shadow .2s ease}
+.site-header.scrolled{box-shadow:0 1px 0 var(--line),0 4px 14px rgba(27,54,131,.06)}
 .site-header .wrap{max-width:1240px;display:flex;align-items:center;gap:8px;min-height:64px}
 .menu{display:flex;align-items:center;flex-wrap:wrap;gap:2px}
-.menu a{font:300 16px/1 var(--f-en);color:var(--ink);opacity:.72;text-decoration:none;padding:12px 12px;white-space:nowrap;transition:opacity .15s ease,color .15s ease}
-.menu a:hover{opacity:1;color:var(--ink)}
-.menu a[aria-current="page"]{opacity:1;font-weight:400;color:var(--accent)}
+.menu a{font:400 16px/1 var(--f-en);color:var(--ink-2);text-decoration:none;padding:12px 12px;white-space:nowrap;transition:color .15s ease}
+.menu a:hover{color:var(--blue)}
+.menu a[aria-current="page"]{color:var(--accent);font-weight:700}
+html[lang="fa"] .menu a{font:400 calc(19px*var(--fs))/1 var(--f-fa)}
+html[lang="fa"] .menu a[aria-current="page"]{font-weight:700}
 /* language switch: globe with a small drop-down (English / فارسی) */
 .lang{margin-inline-start:auto;position:relative}
 .lang summary{list-style:none;cursor:pointer;display:flex;align-items:center;padding:10px;color:var(--blue);transition:color .15s ease}
@@ -45,90 +52,83 @@ img{max-width:100%}
 .lang summary:hover,.lang[open] summary{color:var(--accent)}
 .lang ul{position:absolute;top:calc(100% + 4px);inset-inline-end:0;z-index:20;margin:0;padding:6px 0;list-style:none;min-width:150px;background:#fff;border:1px solid var(--line-grey);box-shadow:0 8px 20px rgba(27,54,131,.14)}
 .lang li a{display:block;padding:8px 18px;color:var(--ink);text-decoration:none;font:400 16px/1.5 var(--f-en)}
-.lang li a:lang(fa){font:400 19px/1.5 var(--f-fa)}
+.lang li a:lang(fa){font:400 calc(19px*var(--fs))/1.5 var(--f-fa)}
 .lang li a:hover{background:var(--grey);color:var(--ink)}
 .lang li a[aria-current]{color:var(--accent);font-weight:700}
-.site-header.scrolled{background:var(--dark);box-shadow:0 1px 8px rgba(0,0,0,.28)}
-.scrolled .menu a,.scrolled .menu a:hover{color:#fff}
-.scrolled .menu a[aria-current="page"],.scrolled .lang summary{color:var(--on-dark)}
-.menu-btn{display:none;background:none;border:0;padding:10px;margin-inline-start:-10px;cursor:pointer;color:inherit}
+.menu-btn{display:none;background:none;border:0;padding:10px;margin-inline-start:-10px;cursor:pointer;color:var(--ink-2)}
 .menu-btn svg{display:block;width:24px;height:24px;stroke:currentColor}
-.scrolled .menu-btn{color:#fff}
-html[lang="fa"] .menu a{font:400 19px/1 var(--f-fa)}
 
 /* ---- page title ---- */
 .page-title{text-align:center;padding:60px 0 48px}
-.page-title h1{font:300 clamp(36px,5vw,50px)/1.2 var(--f-en);color:var(--blue);margin:0}
-.page-title h1{display:inline-block}
+.page-title h1{display:inline-block;font:300 clamp(36px,5vw,50px)/1.2 var(--f-en);color:var(--blue);margin:0}
 .page-title h1::after{content:"";display:block;width:100%;height:3px;background:var(--accent);margin:14px 0 6px}  /* as wide as the title */
-.page-title .fa-name{font:600 30px/1.5 var(--f-fa);color:var(--ink-2);margin:10px 0 0}
-.page-title .lat{font:300 24px/1.4 var(--f-en);color:var(--ink-2);margin:6px 0 0;direction:ltr;unicode-bidi:isolate}
+.page-title .fa-name{font:600 calc(30px*var(--fs))/1.5 var(--f-fa);color:var(--ink-2);margin:10px auto 0}
+.page-title .lat{font:300 24px/1.4 var(--f-en);color:var(--ink-2);margin:6px auto 0;direction:ltr;unicode-bidi:isolate}
 .page-title .sub{max-width:62ch;margin:14px auto 0;color:var(--ink-2)}
 .page-title .dots{margin:16px auto 0;max-width:70ch}
-html[lang="fa"] .page-title h1{font:600 clamp(40px,6vw,56px)/1.35 var(--f-fa)}
+html[lang="fa"] .page-title h1{font:600 clamp(calc(40px*var(--fs)),calc(6vw*var(--fs)),calc(56px*var(--fs)))/1.35 var(--f-fa)}
 
 /* ---- bands ---- */
 .band{padding:56px 0}
 .band.grey{background:var(--grey)}
-.band.blue{background:var(--band);color:#fff}
-.band.blue a{color:#fff}
-.band.blue a:hover{color:#fff;text-decoration-thickness:2px}
+.band.tint{background:var(--grey);border-top:4px solid var(--blue)}   /* the News band: light, with a Khatam-blue edge */
 h2{font:400 26px/1.35 var(--f-en);color:var(--blue);margin:0 0 20px}
-.band.blue h2{color:#fff}
 h3{margin:0}
-html[lang="fa"] h2{font:600 31px/1.5 var(--f-fa)}
+html[lang="fa"] h2{font:600 calc(31px*var(--fs))/1.5 var(--f-fa)}
 
 /* home: bio */
 .bio{display:grid;grid-template-columns:270px 1fr;gap:48px;align-items:start}
 .bio img{display:block;width:100%;height:auto}
-.bio .lead{font-size:18px;color:var(--ink-2)}
-html[lang="fa"] .bio .lead{font-size:22px}
+.bio .lead{font-size:18.5px;color:var(--ink-2)}
+html[lang="fa"] .bio .lead{font-size:calc(22px*var(--fs))}
 
 /* home: news */
-.news{list-style:none;margin:0;padding:0}
+.news{list-style:none;margin:0;padding:0;max-width:calc(var(--measure) + 148px)}
 .news li{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:8px 0}
-.news .d{font-weight:700;white-space:nowrap}
+.news .d{font-weight:700;color:var(--blue);white-space:nowrap}
+html[lang="fa"] .news{max-width:calc(var(--measure) + 168px)}
 html[lang="fa"] .news li{grid-template-columns:150px 1fr}
 
-/* links separated by dots */
-.dots{display:flex;flex-wrap:wrap;align-items:baseline;row-gap:2px}
+/* links separated by dots: underlined only on hover */
+.dots{display:flex;flex-wrap:wrap;align-items:baseline;row-gap:2px;max-width:none}
 .page-title .dots{justify-content:center}
-.dots a{white-space:nowrap}
+.dots a{white-space:nowrap;text-decoration:none}
+.dots a:hover{text-decoration:underline}
 .dots .sep{color:var(--muted);padding:0 7px}
 html[lang="fa"] .dots a{font:400 16.5px/1.7 var(--f-en);unicode-bidi:isolate}
 
 /* research */
-.work h3{font:700 18px/1.5 var(--f-en)}
+.work h3{font:700 18.5px/1.5 var(--f-en)}
 .work .meta{color:var(--muted);margin:2px 0 10px}
-html[lang="fa"] .work h3{font:700 23px/1.8 var(--f-fa)}
-.cols{columns:2;column-gap:48px;margin:0;padding-inline-start:20px}
+html[lang="fa"] .work h3{font:700 calc(23px*var(--fs))/1.8 var(--f-fa)}
+.cols{columns:2;column-gap:48px;margin:0;padding-inline-start:20px;max-width:calc(var(--measure) + 120px)}
 .cols li{break-inside:avoid;padding:2px 0}
 
 /* cv rows */
-.rows{list-style:none;margin:0;padding:0}
+.rows{list-style:none;margin:0;padding:0;max-width:calc(var(--measure) + 204px)}
 .rows li{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:14px 0;border-top:1px solid var(--line)}
 .band.grey .rows li{border-top-color:var(--line-grey)}
 .rows li:first-child{border-top:0;padding-top:0}
 .rows .when{color:var(--muted)}
-.rows h3{font:700 16.5px/1.6 var(--f-en)}
+.rows h3{font:700 17px/1.6 var(--f-en)}
 .rows .where{color:var(--ink-2)}
-html[lang="fa"] .rows h3{font:700 21px/1.8 var(--f-fa)}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.grid2 h3{font:700 16.5px/1.6 var(--f-en);color:var(--ink-2);margin:0 0 6px}
+html[lang="fa"] .rows h3{font:700 calc(21px*var(--fs))/1.8 var(--f-fa)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:calc(var(--measure) + 204px)}
+.grid2 h3{font:700 17px/1.6 var(--f-en);color:var(--ink-2);margin:0 0 6px}
 .grid2 ul{margin:0;padding-inline-start:20px}
-html[lang="fa"] .grid2 h3{font:700 21px/1.8 var(--f-fa)}
+html[lang="fa"] .grid2 h3{font:700 calc(21px*var(--fs))/1.8 var(--f-fa)}
 
 /* writing */
-.posts{list-style:none;margin:0;padding:0}
+.posts{list-style:none;margin:0;padding:0;max-width:calc(var(--measure) + 148px)}
 .posts li{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:14px 0;border-top:1px solid var(--line-grey)}
 .posts li:first-child{border-top:0;padding-top:0}
 .posts .d{color:var(--muted)}
-.posts h3{font:700 18px/1.5 var(--f-en)}
+.posts h3{font:700 18.5px/1.5 var(--f-en)}
 .posts p{margin:4px 0 0}
 .empty{color:var(--ink-2)}
 
 /* a single post */
-.post{max-width:68ch;margin:0 auto}
+.post{max-width:var(--measure);margin:0 auto}
 .post .meta{color:var(--muted);text-align:center;margin:-28px 0 40px}
 .post h2{margin-top:36px}
 .post figure{margin:28px 0}
@@ -138,7 +138,7 @@ html[lang="fa"] .grid2 h3{font:700 21px/1.8 var(--f-fa)}
 /* ---- footer ---- */
 .site-footer{border-top:1px solid var(--line);padding:26px 0 44px;color:var(--muted);font-size:14px}
 .site-footer a{color:var(--muted)}
-html[lang="fa"] .site-footer{font-size:17px}
+html[lang="fa"] .site-footer{font-size:calc(17px*var(--fs))}
 
 /* ---- narrow screens ---- */
 @media (max-width:760px){
@@ -149,11 +149,9 @@ html[lang="fa"] .site-footer{font-size:17px}
   .menu::-webkit-scrollbar{display:none}
   html.js .menu-btn{display:block}
   html.js .menu{display:none}
+  html.js .site-header.open{box-shadow:0 1px 0 var(--line),0 4px 14px rgba(27,54,131,.06)}
   html.js .site-header.open .menu{display:flex;flex-direction:column;align-items:stretch;margin:0 0 10px;overflow:visible}
-  html.js .site-header.open .menu a{padding:12px 4px}
-  html.js .site-header.open{background:var(--dark)}
-  html.js .site-header.open .menu a,html.js .site-header.open .menu-btn{color:#fff}
-  html.js .site-header.open .menu a[aria-current="page"],html.js .site-header.open .lang summary{color:var(--on-dark)}
+  html.js .site-header.open .menu a{padding:12px 4px;border-top:1px solid var(--line)}
   .page-title{padding:40px 0 34px}
   .band{padding:40px 0}
   .bio{grid-template-columns:1fr;gap:24px}
