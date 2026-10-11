@@ -186,6 +186,10 @@ html[lang="fa"] .site-footer{font-size:calc(17px*var(--fs))}
   .wrap{padding:0 20px}
   .site-header .wrap{flex-wrap:wrap;min-height:56px}
   .tools{order:1}
+  /* phones: the globe sits ~42px from the screen edge, so the centred drop-down is a little narrower and nudged 5px inward to keep a gap */
+  .lang li a{padding:6px 12px}
+  .lang ul{transform:translateX(calc(-50% - 5px))}
+  html[dir="rtl"] .lang ul{transform:translateX(calc(-50% + 5px))}
   .menu{order:2;width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -12px 4px}
   .menu::-webkit-scrollbar{display:none}
   html.js .menu-btn{display:block}
