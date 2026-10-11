@@ -15,4 +15,46 @@
     <xhtml:link rel="alternate" hreflang="fa" href="https://amirmbaram.com/fa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://amirmbaram.com/"/>
   </url>
+  <url>
+    <loc>https://amirmbaram.com/research/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amirmbaram.com/research/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://amirmbaram.com/fa/research/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amirmbaram.com/research/"/>
+  </url>
+  <url>
+    <loc>https://amirmbaram.com/fa/research/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amirmbaram.com/research/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://amirmbaram.com/fa/research/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amirmbaram.com/research/"/>
+  </url>
+  <url>
+    <loc>https://amirmbaram.com/writing/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amirmbaram.com/writing/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://amirmbaram.com/fa/writing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amirmbaram.com/writing/"/>
+  </url>
+  <url>
+    <loc>https://amirmbaram.com/fa/writing/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amirmbaram.com/writing/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://amirmbaram.com/fa/writing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amirmbaram.com/writing/"/>
+  </url>
+  <url>
+    <loc>https://amirmbaram.com/cv/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amirmbaram.com/cv/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://amirmbaram.com/fa/cv/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amirmbaram.com/cv/"/>
+  </url>
+  <url>
+    <loc>https://amirmbaram.com/fa/cv/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amirmbaram.com/cv/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://amirmbaram.com/fa/cv/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amirmbaram.com/cv/"/>
+  </url>
 </urlset>

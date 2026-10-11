@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Amir M. Baram — Writing</title>
+  <link>https://amirmbaram.com/writing/</link>
+  <atom:link href="https://amirmbaram.com/writing/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Short pieces on quantitative finance, risk management and machine learning by Amir M. Baram.</description>
+  <language>en</language>
+  <!-- Newest first. One <item> per post:
+  <item>
+    <title>TITLE</title>
+    <link>https://amirmbaram.com/writing/SLUG/</link>
+    <guid>https://amirmbaram.com/writing/SLUG/</guid>
+    <pubDate>Sun, 11 Oct 2026 12:00:00 +0400</pubDate>
+    <description>ONE-PARAGRAPH SUMMARY</description>
+  </item>
+  -->
+</channel>
+</rss>

@@ -11,6 +11,7 @@
 <link rel="alternate" hreflang="en" href="https://amirmbaram.com/">
 <link rel="alternate" hreflang="fa" href="https://amirmbaram.com/fa/">
 <link rel="alternate" hreflang="x-default" href="https://amirmbaram.com/">
+<link rel="alternate" type="application/rss+xml" title="Amir M. Baram — Writing" href="https://amirmbaram.com/writing/feed.xml">
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="fa_IR">
@@ -21,8 +22,12 @@
 <meta property="profile:first_name" content="Amir">
 <meta property="profile:last_name" content="Baram">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="amir-m-baram.jpg" type="image/jpeg">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Vazirmatn:wght@400;500&display=swap">
+<link rel="icon" href="/amir-m-baram.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Vazirmatn:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.className+=' js'</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,260 +58,78 @@
   ]
 }
 </script>
-<style>
-:root{
-  --paper:#EFF2F1; --surface:#F9FBFA; --surface-2:#E7ECEB;
-  --ink:#0F1B1D; --ink-2:#33474A; --muted:#5E6E6F;
-  --line:#CDD8D7; --line-soft:#DEE6E5;
-  --accent:#0E7C86; --accent-soft:#D6EAEB;
-  --f-display:"Newsreader",Georgia,"Times New Roman",serif;
-  --f-body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-  --f-fa:"B Nazanin","BNazanin","Vazirmatn",Tahoma,serif;
-  --wrap:780px;
-}
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
-  --paper:#0B1214; --surface:#121D1F; --surface-2:#18272A;
-  --ink:#E3EBEA; --ink-2:#B4C4C3; --muted:#8CA09F;
-  --line:#25383B; --line-soft:#1C2C2F;
-  --accent:#48BAC3; --accent-soft:#12333A;
-}}
-:root[data-theme="dark"]{
-  --paper:#0B1214; --surface:#121D1F; --surface-2:#18272A;
-  --ink:#E3EBEA; --ink-2:#B4C4C3; --muted:#8CA09F;
-  --line:#25383B; --line-soft:#1C2C2F;
-  --accent:#48BAC3; --accent-soft:#12333A;
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 16.5px/1.68 var(--f-body)}
-a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
-a:hover{border-bottom-color:var(--accent)}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-.lbl{font:500 11.5px/1.4 var(--f-mono);letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
-.fa-in{font-family:var(--f-fa)}
-
-nav{position:sticky;top:0;z-index:5;height:50px;border-bottom:1px solid var(--line);
-  background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-nav .wrap{display:flex;align-items:center;gap:4px;height:100%;overflow-x:auto;scrollbar-width:none}
-nav .wrap::-webkit-scrollbar{display:none}
-nav .me{font:500 15px/1 var(--f-display);color:var(--ink);border:0;margin-right:auto;white-space:nowrap;padding-right:12px}
-nav a.s{font:500 12px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:0;padding:8px 9px;white-space:nowrap;
-  transition:color .16s ease,background-color .16s ease,box-shadow .16s ease}
-nav a.s:hover{color:var(--ink)}
-nav a.s.active{color:var(--accent);background:var(--accent-soft);box-shadow:inset 0 -2px 0 var(--accent)}
-section,header{scroll-margin-top:60px}
-
-header{padding:64px 0 40px;border-bottom:1px solid var(--line)}
-.id{display:grid;grid-template-columns:132px 1fr;gap:28px;align-items:center}
-.id img{width:132px;height:132px;object-fit:cover;object-position:50% 30%;display:block;border:1px solid var(--line);background:var(--surface-2)}
-h1{font:500 clamp(36px,5.4vw,52px)/1.08 var(--f-display);margin:6px 0 4px;letter-spacing:-.01em}
-.fa{font:600 25px/1.5 var(--f-fa);color:var(--ink-2);margin:0;text-align:left}
-.aka{margin:6px 0 0;font-size:14.5px;color:var(--muted)}
-.aka .fa-in,footer .fa-in{font-size:1.25em}
-nav a.lang{font:600 17px/1 var(--f-fa);color:var(--accent);border:0;padding:8px 9px 8px 14px;white-space:nowrap}
-.role{margin:16px 0 0;font-size:19px;line-height:1.55;color:var(--ink-2);max-width:62ch}
-.facts{display:flex;flex-wrap:wrap;margin-top:30px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.facts div{flex:1 1 170px;padding:12px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
-.facts b{display:block;font-weight:500;font-size:15.5px;margin-top:2px}
-
-section{padding:52px 0;border-bottom:1px solid var(--line)}
-h2{font:500 clamp(26px,3.4vw,32px)/1.2 var(--f-display);margin:0 0 18px;display:flex;gap:12px;align-items:baseline}
-h2 .n{font:500 13px/1 var(--f-mono);color:var(--accent)}
-p{margin:0 0 14px;max-width:68ch}
-.item{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padding:16px 0;border-top:1px solid var(--line-soft)}
-.item:first-of-type{border-top:0;padding-top:4px}
-.item h3{margin:0;font-size:16.5px;font-weight:600}
-.item .where{color:var(--ink-2);font-size:15px}
-.item .note{grid-column:1/-1;color:var(--ink-2);font-size:15px;margin:4px 0 0;max-width:68ch}
-.item .when{font:400 13px/1.6 var(--f-mono);color:var(--muted);text-align:right;white-space:nowrap}
-.thesis{background:var(--surface);border:1px solid var(--line);box-shadow:inset 3px 0 0 var(--accent);padding:20px 22px;margin:6px 0 26px}
-.thesis p:last-child{margin-bottom:0}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;padding:0;list-style:none}
-.chips li{font-size:14.5px;padding:5px 11px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2)}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-ul.links{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
-ul.links li{border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
-ul.links a{display:block;padding:14px 16px;border:0;color:var(--ink)}
-ul.links a:hover{background:var(--accent-soft)}
-ul.links .k{display:block;font:500 11.5px/1.4 var(--f-mono);letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
-ul.links .v{font-size:15px;color:var(--ink-2)}
-footer{padding:28px 0 56px;color:var(--muted);font:400 13px/1.6 var(--f-mono)}
-@media (max-width:640px){
-  header{padding-top:40px}
-  .id{grid-template-columns:1fr;gap:18px}
-  .id img{width:112px;height:112px}
-  .item{grid-template-columns:1fr}
-  .item .when{text-align:left}
-  .grid2{grid-template-columns:1fr;gap:8px}
-  nav .me{display:none}
-}
-</style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav aria-label="Sections">
+<header class="site-header">
   <div class="wrap">
-    <a class="me" href="#top">Amir M. Baram</a>
-    <a class="s" href="#about">About</a>
-    <a class="s" href="#research">Research</a>
-    <a class="s" href="#experience">Experience</a>
-    <a class="s" href="#education">Education</a>
-    <a class="s" href="#skills">Skills</a>
-    <a class="s" href="#contact">Contact</a>
-    <a class="lang" href="fa/" hreflang="fa" lang="fa">فارسی</a>
-  </div>
-</nav>
-
-<header id="top">
-  <div class="wrap">
-    <div class="id">
-      <img src="amir-m-baram.jpg" alt="Portrait of Amir M. Baram" width="132" height="132">
-      <div>
-        <div class="lbl">Quantitative researcher</div>
-        <h1>Amir M. Baram</h1>
-        <p class="fa" lang="fa" dir="rtl">امیرمحمد برم</p>
-        <p class="aka">Also written Amir Mohammad Baram · <span class="fa-in" lang="fa" dir="rtl">امیر محمد برم</span></p>
-      </div>
-    </div>
-    <p class="role">MSc Finance student at Khatam University, building machine-learning forecasts for crypto markets and the risk management around them. Based in Dubai.</p>
-    <div class="facts">
-      <div><span class="lbl">Studying</span><b>MSc Finance, Khatam University</b></div>
-      <div><span class="lbl">Background</span><b>BSc Industrial Engineering</b></div>
-      <div><span class="lbl">Based in</span><b>Dubai, UAE</b></div>
-    </div>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a class="brand" href="/">Amir M. Baram</a>
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/research/">Research</a>
+      <a href="/writing/">Writing</a>
+      <a href="/cv/">CV</a>
+      <a class="lang" href="/fa/" hreflang="fa" lang="fa">فارسی</a>
+    </nav>
   </div>
 </header>
 
-<main>
-  <section id="about">
+<main id="main">
+  <div class="page-title">
     <div class="wrap">
-      <h2><span class="n">§1</span>About me</h2>
-      <p>I'm Amir Mohammad Baram, Amir M. Baram for short, and I came to finance from industrial engineering. After a bachelor's at Babol Noshirvani University of Technology, and close to five years as a freelance financial-market analyst, I started an MSc in Finance at Khatam University in 2024.</p>
-      <p>My work sits where finance meets machine learning: forecasting crypto prices from the whole market around them — spot, futures and options — and treating a forecast as an input to a decision, with risk management on top. I care most about derivatives and options markets, hedging, portfolio optimization, and models that are tested honestly on data they have not seen.</p>
-      <p>I also like the practical side of the field. I spent several years as an expert at the technology incubator of Noshirvani University, and I take part in the quant community — most recently the Quant Circle meetup at Sharif University of Technology on hedging physical oil and energy trades.</p>
+      <h1>Amir M. Baram</h1>
+      <p class="fa-name" lang="fa" dir="rtl">امیرمحمد برم</p>
+      <p class="aka">Also written Amir Mohammad Baram · <span class="fa-in" lang="fa" dir="rtl">امیر محمد برم</span></p>
+    </div>
+  </div>
+
+  <section class="band" id="bio" aria-labelledby="h-bio">
+    <div class="wrap bio">
+      <img src="/amir-m-baram.jpg" alt="Portrait of Amir M. Baram" width="1053" height="1155">
+      <div>
+        <h2 id="h-bio">Bio</h2>
+        <p class="lead">MSc Finance student at Khatam University, building machine-learning forecasts for crypto markets and the risk management around them. Based in Dubai.</p>
+        <p>I'm Amir Mohammad Baram, Amir M. Baram for short, and I came to finance from industrial engineering. After a bachelor's at Babol Noshirvani University of Technology, and close to five years as a freelance financial-market analyst, I started an MSc in Finance at Khatam University in 2024.</p>
+        <p>My work sits where finance meets machine learning: forecasting crypto prices from the whole market around them — spot, futures and options — and treating a forecast as an input to a decision, with risk management on top. I care most about derivatives and options markets, hedging, portfolio optimization, and models that are tested honestly on data they have not seen.</p>
+        <p>I also like the practical side of the field. I spent several years as an expert at the technology incubator of Noshirvani University, and I take part in the quant community — most recently the Quant Circle meetup at Sharif University of Technology on hedging physical oil and energy trades.</p>
+      </div>
     </div>
   </section>
 
-  <section id="research">
+  <section class="band blue" id="news" aria-labelledby="h-news">
     <div class="wrap">
-      <h2><span class="n">§2</span>Research</h2>
-      <div class="thesis">
-        <div class="lbl">Master's thesis · in progress</div>
-        <p><b>Forecasting Bitcoin and Ethereum prices with a Transformer model.</b> The model reads several markets at once — spot, futures and options — rather than the price history alone.</p>
-      </div>
-      <div class="lbl">Interests</div>
-      <ul class="chips">
-        <li>Quantitative finance</li>
-        <li>Derivatives &amp; options markets</li>
-        <li>Risk management &amp; hedging</li>
-        <li>Portfolio optimization</li>
-        <li>Machine learning for time series</li>
-        <li>Crypto markets</li>
-        <li>Energy markets</li>
+      <h2 id="h-news">News</h2>
+      <ul class="news">
+        <li><span class="d">10/2026</span><span>New website: <a href="https://amirmbaram.com/">amirmbaram.com</a>, in English and <a href="/fa/" hreflang="fa">Persian</a>.</span></li>
+        <li><span class="d">Summer 2026</span><span>Took part in the 10th Quant Circle at Sharif University of Technology, on hedging physical oil and energy trades.</span></li>
+        <li><span class="d">Ongoing</span><span>Master's thesis: forecasting Bitcoin and Ethereum with a Transformer model that reads the spot, futures and options markets together. <a href="/research/">More</a></span></li>
+        <li><span class="d">9/2024</span><span>Started the MSc in Finance at Khatam University.</span></li>
       </ul>
     </div>
   </section>
 
-  <section id="experience">
+  <section class="band grey" id="research" aria-labelledby="h-research">
     <div class="wrap">
-      <h2><span class="n">§3</span>Experience</h2>
-      <div class="item">
-        <div><h3>Incubator expert</h3><div class="where">Technology Incubator, Babol Noshirvani University of Technology · seasonal</div></div>
-        <div class="when">Jul 2022 – Apr 2025</div>
-      </div>
-      <div class="item">
-        <div><h3>Financial market analyst</h3><div class="where">Freelance · Tehran</div></div>
-        <div class="when">Jan 2020 – Sep 2024</div>
-      </div>
-      <div class="item">
-        <div><h3>Community</h3><div class="where">Quant Circle, Sharif University of Technology — hedging physical oil and energy trades · BINNOCUP, Noshirvani International Innovation and Business Festival</div></div>
-        <div class="when"></div>
-      </div>
+      <h2 id="h-research">Research Summary</h2>
+      <p><b>Forecasting Bitcoin and Ethereum prices with a Transformer model.</b> The model reads several markets at once — spot, futures and options — rather than the price history alone.</p>
+      <p>Around it: quantitative finance, derivatives and options markets, risk management and hedging, portfolio optimization, machine learning for time series, and crypto and energy markets. <a href="/research/">Research page</a></p>
     </div>
   </section>
 
-  <section id="education">
+  <section class="band" id="contact" aria-labelledby="h-contact">
     <div class="wrap">
-      <h2><span class="n">§4</span>Education</h2>
-      <div class="item">
-        <div><h3>MSc Finance</h3><div class="where">Khatam University, Tehran</div></div>
-        <div class="when">Sep 2024 – present</div>
-      </div>
-      <div class="item">
-        <div><h3>BSc Industrial Engineering</h3><div class="where">Babol Noshirvani University of Technology</div></div>
-        <div class="when">Sep 2018 – Aug 2023</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="wrap">
-      <h2><span class="n">§5</span>Skills</h2>
-      <div class="grid2">
-        <div>
-          <div class="lbl">Methods &amp; tools</div>
-          <ul class="chips">
-            <li>Python</li>
-            <li>Machine learning</li>
-            <li>Risk management</li>
-            <li>Portfolio optimization</li>
-            <li>EViews</li>
-            <li>LaTeX</li>
-          </ul>
-        </div>
-        <div>
-          <div class="lbl">Languages</div>
-          <ul class="chips">
-            <li>Persian — native</li>
-            <li>English — professional working proficiency</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <h2><span class="n">§6</span>Contact &amp; elsewhere</h2>
+      <h2 id="h-contact">Contact</h2>
       <p>Write to me at <a href="mailto:theamirbaram@gmail.com">theamirbaram@gmail.com</a> or send a message on LinkedIn.</p>
-      <ul class="links">
-        <li><a href="https://www.linkedin.com/in/amirmbaram/" rel="me"><span class="k">LinkedIn</span><span class="v">in/amirmbaram</span></a></li>
-        <li><a href="https://github.com/theamirbaram" rel="me"><span class="k">GitHub</span><span class="v">theamirbaram</span></a></li>
-        <li><a href="https://www.kaggle.com/theamirbaram" rel="me"><span class="k">Kaggle</span><span class="v">theamirbaram</span></a></li>
-        <li><a href="https://huggingface.co/theamirbaram" rel="me"><span class="k">Hugging Face</span><span class="v">theamirbaram</span></a></li>
-        <li><a href="https://orcid.org/0009-0007-6904-6348" rel="me"><span class="k">ORCID</span><span class="v">0009-0007-6904-6348</span></a></li>
-        <li><a href="https://www.researchgate.net/profile/Amir-Baram" rel="me"><span class="k">ResearchGate</span><span class="v">Amir-Baram</span></a></li>
-        <li><a href="https://www.youtube.com/@theamirbaram" rel="me"><span class="k">YouTube</span><span class="v">@theamirbaram</span></a></li>
-      </ul>
+      <p class="dots"><a href="https://www.linkedin.com/in/amirmbaram/" rel="me">LinkedIn</a><span class="sep">•</span><a href="https://github.com/theamirbaram" rel="me">GitHub</a><span class="sep">•</span><a href="https://www.kaggle.com/theamirbaram" rel="me">Kaggle</a><span class="sep">•</span><a href="https://huggingface.co/theamirbaram" rel="me">Hugging Face</a><span class="sep">•</span><a href="https://orcid.org/0009-0007-6904-6348" rel="me">ORCID</a><span class="sep">•</span><a href="https://www.researchgate.net/profile/Amir-Baram" rel="me">ResearchGate</a><span class="sep">•</span><a href="https://www.youtube.com/@theamirbaram" rel="me">YouTube</a></p>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">© 2026 Amir M. Baram · <span class="fa-in" lang="fa" dir="rtl">امیرمحمد برم</span> · <a href="fa/" hreflang="fa" lang="fa" class="fa-in">نسخه‌ی فارسی</a></div>
+<footer class="site-footer">
+  <div class="wrap">© 2026 Amir M. Baram · <span class="fa-in" lang="fa" dir="rtl">امیرمحمد برم</span> · <a href="/fa/" hreflang="fa" lang="fa" class="fa-in">نسخه‌ی فارسی</a></div>
 </footer>
-
-<script>
-(function(){
-  var nav=document.querySelector('nav');
-  var links=Array.prototype.slice.call(document.querySelectorAll('nav a.s'));
-  var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
-  function update(){
-    var edge=nav.offsetHeight+28, idx=-1;
-    for(var i=0;i<secs.length;i++){ if(secs[i]&&secs[i].getBoundingClientRect().top<=edge) idx=i; }
-    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-8) idx=secs.length-1;
-    for(var j=0;j<links.length;j++){
-      var on=(j===idx); links[j].classList.toggle('active',on);
-      if(on) links[j].setAttribute('aria-current','true'); else links[j].removeAttribute('aria-current');
-    }
-  }
-  var queued=false;
-  function onScroll(){ if(queued) return; queued=true; requestAnimationFrame(function(){queued=false;update();}); }
-  window.addEventListener('scroll',onScroll,{passive:true});
-  window.addEventListener('resize',onScroll);
-  update();
-})();
-</script>
+<script src="/assets/site.js"></script>
 </body>
 </html>

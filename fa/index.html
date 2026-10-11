@@ -10,6 +10,7 @@
 <link rel="alternate" hreflang="en" href="https://amirmbaram.com/">
 <link rel="alternate" hreflang="fa" href="https://amirmbaram.com/fa/">
 <link rel="alternate" hreflang="x-default" href="https://amirmbaram.com/">
+<link rel="alternate" type="application/rss+xml" title="امیرمحمد برم — نوشته‌ها" href="https://amirmbaram.com/fa/writing/feed.xml">
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="fa_IR">
 <meta property="og:locale:alternate" content="en_US">
@@ -20,8 +21,12 @@
 <meta property="profile:first_name" content="امیرمحمد">
 <meta property="profile:last_name" content="برم">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="../amir-m-baram.jpg" type="image/jpeg">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Vazirmatn:wght@400;500;600&display=swap">
+<link rel="icon" href="/amir-m-baram.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Lato:wght@300;400;700&family=Vazirmatn:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.className+=' js'</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,259 +57,78 @@
   ]
 }
 </script>
-<style>
-:root{
-  --paper:#EFF2F1; --surface:#F9FBFA; --surface-2:#E7ECEB;
-  --ink:#0F1B1D; --ink-2:#33474A; --muted:#5E6E6F;
-  --line:#CDD8D7; --line-soft:#DEE6E5;
-  --accent:#0E7C86; --accent-soft:#D6EAEB;
-  --f-fa:"B Nazanin","BNazanin","Vazirmatn",Tahoma,serif;
-  --f-display:"Newsreader",Georgia,"Times New Roman",serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-  --wrap:800px;
-}
-@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
-  --paper:#0B1214; --surface:#121D1F; --surface-2:#18272A;
-  --ink:#E3EBEA; --ink-2:#B4C4C3; --muted:#8CA09F;
-  --line:#25383B; --line-soft:#1C2C2F;
-  --accent:#48BAC3; --accent-soft:#12333A;
-}}
-:root[data-theme="dark"]{
-  --paper:#0B1214; --surface:#121D1F; --surface-2:#18272A;
-  --ink:#E3EBEA; --ink-2:#B4C4C3; --muted:#8CA09F;
-  --line:#25383B; --line-soft:#1C2C2F;
-  --accent:#48BAC3; --accent-soft:#12333A;
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 20.5px/2.05 var(--f-fa)}
-a{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
-a:hover{border-bottom-color:var(--accent)}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
-.lbl{font:500 15.5px/1.6 var(--f-fa);color:var(--muted)}
-.en{font-family:var(--f-mono);font-size:.8em;direction:ltr;unicode-bidi:isolate}
-
-nav{position:sticky;top:0;z-index:5;height:54px;border-bottom:1px solid var(--line);
-  background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-nav .wrap{display:flex;align-items:center;gap:4px;height:100%;overflow-x:auto;scrollbar-width:none}
-nav .wrap::-webkit-scrollbar{display:none}
-nav .me{font:600 19px/1 var(--f-fa);color:var(--ink);border:0;margin-inline-end:auto;white-space:nowrap;padding-inline-end:12px}
-nav a.s{font:500 16px/1 var(--f-fa);color:var(--muted);border:0;padding:9px 10px;white-space:nowrap;
-  transition:color .16s ease,background-color .16s ease,box-shadow .16s ease}
-nav a.s:hover{color:var(--ink)}
-nav a.s.active{color:var(--accent);background:var(--accent-soft);box-shadow:inset 0 -2px 0 var(--accent)}
-nav a.lang{font:500 12px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border:0;padding:9px 14px 9px 9px;white-space:nowrap}
-section,header{scroll-margin-top:64px}
-
-header{padding:64px 0 40px;border-bottom:1px solid var(--line)}
-.id{display:grid;grid-template-columns:132px 1fr;gap:28px;align-items:center}
-.id img{width:132px;height:132px;object-fit:cover;object-position:50% 30%;display:block;border:1px solid var(--line);background:var(--surface-2)}
-h1{font:600 clamp(40px,6vw,58px)/1.3 var(--f-fa);margin:2px 0 0}
-.lat{font:500 21px/1.4 var(--f-display);color:var(--ink-2);margin:2px 0 0;direction:ltr;unicode-bidi:isolate;text-align:right}
-.aka{margin:8px 0 0;font-size:16.5px;line-height:1.7;color:var(--muted)}
-.role{margin:18px 0 0;font-size:22px;line-height:1.95;color:var(--ink-2);max-width:62ch}
-.facts{display:flex;flex-wrap:wrap;margin-top:30px;border-top:1px solid var(--line);border-inline-start:1px solid var(--line)}
-.facts div{flex:1 1 170px;padding:10px 16px;border-inline-end:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
-.facts b{display:block;font-weight:600;font-size:19px;line-height:1.7;margin-top:2px}
-
-section{padding:52px 0;border-bottom:1px solid var(--line)}
-h2{font:600 clamp(28px,3.8vw,35px)/1.4 var(--f-fa);margin:0 0 16px;display:flex;gap:12px;align-items:baseline}
-h2 .n{font:600 18px/1 var(--f-fa);color:var(--accent)}
-p{margin:0 0 14px;max-width:68ch}
-.item{display:grid;grid-template-columns:1fr auto;gap:2px 20px;padding:14px 0;border-top:1px solid var(--line-soft)}
-.item:first-of-type{border-top:0;padding-top:4px}
-.item h3{margin:0;font-size:21px;font-weight:600;line-height:1.8}
-.item .where{color:var(--ink-2);font-size:18.5px;line-height:1.9}
-.item .note{grid-column:1/-1;color:var(--ink-2);font-size:18.5px;line-height:1.9;margin:4px 0 0;max-width:68ch}
-.item .when{font:400 18px/1.8 var(--f-fa);color:var(--muted);text-align:end;white-space:nowrap}
-.thesis{background:var(--surface);border:1px solid var(--line);border-inline-start:3px solid var(--accent);padding:18px 22px;margin:6px 0 26px}
-.thesis p:last-child{margin-bottom:0}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0;padding:0;list-style:none}
-.chips li{font-size:17.5px;line-height:1.7;padding:4px 12px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2)}
-.chips li .en{font-size:.82em}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-ul.links{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));border-top:1px solid var(--line);border-inline-start:1px solid var(--line)}
-ul.links li{border-inline-end:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
-ul.links a{display:block;padding:12px 16px;border:0;color:var(--ink);line-height:1.6}
-ul.links a:hover{background:var(--accent-soft)}
-ul.links .k{display:block;font:500 11.5px/1.6 var(--f-mono);letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
-ul.links .v{font:400 14px/1.6 var(--f-mono);color:var(--ink-2);direction:ltr;unicode-bidi:isolate}
-footer{padding:28px 0 56px;color:var(--muted);font:400 17px/1.8 var(--f-fa)}
-@media (max-width:640px){
-  header{padding-top:40px}
-  .id{grid-template-columns:1fr;gap:18px}
-  .id img{width:112px;height:112px}
-  .item{grid-template-columns:1fr}
-  .item .when{text-align:start}
-  .grid2{grid-template-columns:1fr;gap:8px}
-  nav .me{display:none}
-}
-</style>
 </head>
 <body>
+<a class="skip" href="#main">رفتن به متن</a>
 
-<nav aria-label="بخش‌ها">
+<header class="site-header">
   <div class="wrap">
-    <a class="me" href="#top">امیرمحمد برم</a>
-    <a class="s" href="#about">درباره‌ی من</a>
-    <a class="s" href="#research">پژوهش</a>
-    <a class="s" href="#experience">سوابق</a>
-    <a class="s" href="#education">تحصیلات</a>
-    <a class="s" href="#skills">مهارت‌ها</a>
-    <a class="s" href="#contact">تماس</a>
-    <a class="lang" href="../" hreflang="en" lang="en" dir="ltr">English</a>
-  </div>
-</nav>
-
-<header id="top">
-  <div class="wrap">
-    <div class="id">
-      <img src="../amir-m-baram.jpg" alt="تصویر امیرمحمد برم" width="132" height="132">
-      <div>
-        <div class="lbl">پژوهشگر کمّی</div>
-        <h1>امیرمحمد برم</h1>
-        <p class="lat" lang="en">Amir M. Baram</p>
-        <p class="aka">شکل‌های دیگر نام: امیر محمد برم · <span class="en" lang="en">Amir Mohammad Baram</span></p>
-      </div>
-    </div>
-    <p class="role">دانشجوی کارشناسی ارشد مالی در دانشگاه خاتم. با یادگیری ماشین برای بازارهای رمزارز پیش‌بینی می‌سازم و روی مدیریت ریسکِ پیرامون آن کار می‌کنم. ساکن دبی.</p>
-    <div class="facts">
-      <div><span class="lbl">در حال تحصیل</span><b>کارشناسی ارشد مالی، دانشگاه خاتم</b></div>
-      <div><span class="lbl">پیشینه</span><b>کارشناسی مهندسی صنایع</b></div>
-      <div><span class="lbl">محل زندگی</span><b>دبی، امارات</b></div>
-    </div>
+    <button class="menu-btn" type="button" aria-label="منو" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a class="brand" href="/fa/">امیرمحمد برم</a>
+    <nav class="menu" id="menu" aria-label="منوی اصلی">
+      <a href="/fa/" aria-current="page">خانه</a>
+      <a href="/fa/research/">پژوهش</a>
+      <a href="/fa/writing/">نوشته‌ها</a>
+      <a href="/fa/cv/">رزومه</a>
+      <a class="lang" href="/" hreflang="en" lang="en" dir="ltr">English</a>
+    </nav>
   </div>
 </header>
 
-<main>
-  <section id="about">
+<main id="main">
+  <div class="page-title">
     <div class="wrap">
-      <h2><span class="n">§۱</span>درباره‌ی من</h2>
-      <p>من امیرمحمد برم هستم و از مهندسی صنایع به مالی رسیدم. پس از کارشناسی در دانشگاه صنعتی نوشیروانی بابل و نزدیک به پنج سال کار مستقل به‌عنوان تحلیلگر بازارهای مالی، در سال ۱۴۰۳ کارشناسی ارشد مالی را در دانشگاه خاتم شروع کردم.</p>
-      <p>کار من جایی است که مالی و یادگیری ماشین به هم می‌رسند: پیش‌بینی قیمت رمزارزها از روی کل بازار پیرامونشان، یعنی بازار نقدی، آتی و اختیار معامله، و نگاه به پیش‌بینی به‌عنوان ورودیِ یک تصمیم، با مدیریت ریسک در کنار آن. بیش از همه به بازارهای مشتقه و اختیار معامله، پوشش ریسک، بهینه‌سازی سبد دارایی و مدل‌هایی علاقه دارم که صادقانه روی داده‌ای آزموده شوند که پیش‌تر ندیده‌اند.</p>
-      <p>جنبه‌ی عملی این رشته را هم دوست دارم. چند سال کارشناس مرکز رشد فناوری دانشگاه نوشیروانی بودم و در جمع‌های کوانت شرکت می‌کنم؛ تازه‌ترینش نشست <span class="en" lang="en">Quant Circle</span> در دانشگاه صنعتی شریف بود، درباره‌ی پوشش ریسک معاملات فیزیکی نفت و انرژی.</p>
+      <h1>امیرمحمد برم</h1>
+      <p class="lat" lang="en">Amir M. Baram</p>
+      <p class="aka">شکل‌های دیگر نام: امیر محمد برم · <span class="en" lang="en">Amir Mohammad Baram</span></p>
+    </div>
+  </div>
+
+  <section class="band" id="bio" aria-labelledby="h-bio">
+    <div class="wrap bio">
+      <img src="/amir-m-baram.jpg" alt="تصویر امیرمحمد برم" width="1053" height="1155">
+      <div>
+        <h2 id="h-bio">معرفی</h2>
+        <p class="lead">دانشجوی کارشناسی ارشد مالی در دانشگاه خاتم. با یادگیری ماشین برای بازارهای رمزارز پیش‌بینی می‌سازم و روی مدیریت ریسکِ پیرامون آن کار می‌کنم. ساکن دبی.</p>
+        <p>من امیرمحمد برم هستم و از مهندسی صنایع به مالی رسیدم. پس از کارشناسی در دانشگاه صنعتی نوشیروانی بابل و نزدیک به پنج سال کار مستقل به‌عنوان تحلیلگر بازارهای مالی، در سال ۱۴۰۳ کارشناسی ارشد مالی را در دانشگاه خاتم شروع کردم.</p>
+        <p>کار من جایی است که مالی و یادگیری ماشین به هم می‌رسند: پیش‌بینی قیمت رمزارزها از روی کل بازار پیرامونشان، یعنی بازار نقدی، آتی و اختیار معامله، و نگاه به پیش‌بینی به‌عنوان ورودیِ یک تصمیم، با مدیریت ریسک در کنار آن. بیش از همه به بازارهای مشتقه و اختیار معامله، پوشش ریسک، بهینه‌سازی سبد دارایی و مدل‌هایی علاقه دارم که صادقانه روی داده‌ای آزموده شوند که پیش‌تر ندیده‌اند.</p>
+        <p>جنبه‌ی عملی این رشته را هم دوست دارم. چند سال کارشناس مرکز رشد فناوری دانشگاه نوشیروانی بودم و در جمع‌های کوانت شرکت می‌کنم؛ تازه‌ترینش نشست <span class="en" lang="en">Quant Circle</span> در دانشگاه صنعتی شریف بود، درباره‌ی پوشش ریسک معاملات فیزیکی نفت و انرژی.</p>
+      </div>
     </div>
   </section>
 
-  <section id="research">
+  <section class="band blue" id="news" aria-labelledby="h-news">
     <div class="wrap">
-      <h2><span class="n">§۲</span>پژوهش</h2>
-      <div class="thesis">
-        <div class="lbl">پایان‌نامه‌ی کارشناسی ارشد · در حال انجام</div>
-        <p><b>پیش‌بینی قیمت بیت‌کوین و اتریوم با مدل <span class="en" lang="en">Transformer</span>.</b> مدل به‌جای تاریخچه‌ی قیمت به‌تنهایی، چند بازار را هم‌زمان می‌خواند: نقدی، آتی و اختیار معامله.</p>
-      </div>
-      <div class="lbl">علاقه‌ها</div>
-      <ul class="chips">
-        <li>مالی کمّی</li>
-        <li>بازارهای مشتقه و اختیار معامله</li>
-        <li>مدیریت ریسک و پوشش ریسک</li>
-        <li>بهینه‌سازی سبد دارایی</li>
-        <li>یادگیری ماشین برای سری‌های زمانی</li>
-        <li>بازارهای رمزارز</li>
-        <li>بازارهای انرژی</li>
+      <h2 id="h-news">اخبار</h2>
+      <ul class="news">
+        <li><span class="d">مهر ۱۴۰۵</span><span>وب‌سایت تازه در نشانی <a class="en" href="https://amirmbaram.com/fa/">amirmbaram.com</a>، به فارسی و <a href="/" hreflang="en">انگلیسی</a>.</span></li>
+        <li><span class="d">تابستان ۱۴۰۵</span><span>شرکت در دهمین نشست <span class="en" lang="en">Quant Circle</span> در دانشگاه صنعتی شریف، درباره‌ی پوشش ریسک معاملات فیزیکی نفت و انرژی.</span></li>
+        <li><span class="d">در حال انجام</span><span>پایان‌نامه‌ی کارشناسی ارشد: پیش‌بینی قیمت بیت‌کوین و اتریوم با مدل <span class="en" lang="en">Transformer</span> که بازار نقدی، آتی و اختیار معامله را هم‌زمان می‌خواند. <a href="/fa/research/">بیشتر</a></span></li>
+        <li><span class="d">۱۴۰۳</span><span>آغاز کارشناسی ارشد مالی در دانشگاه خاتم.</span></li>
       </ul>
     </div>
   </section>
 
-  <section id="experience">
+  <section class="band grey" id="research" aria-labelledby="h-research">
     <div class="wrap">
-      <h2><span class="n">§۳</span>سوابق</h2>
-      <div class="item">
-        <div><h3>کارشناس مرکز رشد</h3><div class="where">مرکز رشد فناوری دانشگاه صنعتی نوشیروانی بابل · فصلی</div></div>
-        <div class="when">۱۴۰۱ – ۱۴۰۴</div>
-      </div>
-      <div class="item">
-        <div><h3>تحلیلگر بازارهای مالی</h3><div class="where">مستقل · تهران</div></div>
-        <div class="when">۱۳۹۸ – ۱۴۰۳</div>
-      </div>
-      <div class="item">
-        <div><h3>فعالیت‌های جمعی</h3><div class="where">نشست <span class="en" lang="en">Quant Circle</span> در دانشگاه صنعتی شریف، درباره‌ی پوشش ریسک معاملات فیزیکی نفت و انرژی · <span class="en" lang="en">BINNOCUP</span>، جشنواره‌ی بین‌المللی نوآوری و کسب‌وکار نوشیروانی</div></div>
-        <div class="when"></div>
-      </div>
+      <h2 id="h-research">خلاصه‌ی پژوهش</h2>
+      <p><b>پیش‌بینی قیمت بیت‌کوین و اتریوم با مدل <span class="en" lang="en">Transformer</span>.</b> مدل به‌جای تاریخچه‌ی قیمت به‌تنهایی، چند بازار را هم‌زمان می‌خواند: نقدی، آتی و اختیار معامله.</p>
+      <p>و در پیرامون آن: مالی کمّی، بازارهای مشتقه و اختیار معامله، مدیریت ریسک و پوشش ریسک، بهینه‌سازی سبد دارایی، یادگیری ماشین برای سری‌های زمانی، و بازارهای رمزارز و انرژی. <a href="/fa/research/">صفحه‌ی پژوهش</a></p>
     </div>
   </section>
 
-  <section id="education">
+  <section class="band" id="contact" aria-labelledby="h-contact">
     <div class="wrap">
-      <h2><span class="n">§۴</span>تحصیلات</h2>
-      <div class="item">
-        <div><h3>کارشناسی ارشد مالی</h3><div class="where">دانشگاه خاتم، تهران</div></div>
-        <div class="when">۱۴۰۳ تاکنون</div>
-      </div>
-      <div class="item">
-        <div><h3>کارشناسی مهندسی صنایع</h3><div class="where">دانشگاه صنعتی نوشیروانی بابل</div></div>
-        <div class="when">۱۳۹۷ – ۱۴۰۲</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="wrap">
-      <h2><span class="n">§۵</span>مهارت‌ها</h2>
-      <div class="grid2">
-        <div>
-          <div class="lbl">روش‌ها و ابزارها</div>
-          <ul class="chips">
-            <li><span class="en" lang="en">Python</span></li>
-            <li>یادگیری ماشین</li>
-            <li>مدیریت ریسک</li>
-            <li>بهینه‌سازی سبد دارایی</li>
-            <li><span class="en" lang="en">EViews</span></li>
-            <li><span class="en" lang="en">LaTeX</span></li>
-          </ul>
-        </div>
-        <div>
-          <div class="lbl">زبان‌ها</div>
-          <ul class="chips">
-            <li>فارسی: زبان مادری</li>
-            <li>انگلیسی: سطح کاری حرفه‌ای</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <h2><span class="n">§۶</span>تماس و جاهای دیگر</h2>
+      <h2 id="h-contact">تماس</h2>
       <p>برای تماس به نشانی <a class="en" href="mailto:theamirbaram@gmail.com">theamirbaram@gmail.com</a> ایمیل بزنید یا در لینکدین پیام بدهید.</p>
-      <ul class="links">
-        <li><a href="https://www.linkedin.com/in/amirmbaram/" rel="me"><span class="k">LinkedIn</span><span class="v">in/amirmbaram</span></a></li>
-        <li><a href="https://github.com/theamirbaram" rel="me"><span class="k">GitHub</span><span class="v">theamirbaram</span></a></li>
-        <li><a href="https://www.kaggle.com/theamirbaram" rel="me"><span class="k">Kaggle</span><span class="v">theamirbaram</span></a></li>
-        <li><a href="https://huggingface.co/theamirbaram" rel="me"><span class="k">Hugging Face</span><span class="v">theamirbaram</span></a></li>
-        <li><a href="https://orcid.org/0009-0007-6904-6348" rel="me"><span class="k">ORCID</span><span class="v">0009-0007-6904-6348</span></a></li>
-        <li><a href="https://www.researchgate.net/profile/Amir-Baram" rel="me"><span class="k">ResearchGate</span><span class="v">Amir-Baram</span></a></li>
-        <li><a href="https://www.youtube.com/@theamirbaram" rel="me"><span class="k">YouTube</span><span class="v">@theamirbaram</span></a></li>
-      </ul>
+      <p class="dots"><a href="https://www.linkedin.com/in/amirmbaram/" rel="me">LinkedIn</a><span class="sep">•</span><a href="https://github.com/theamirbaram" rel="me">GitHub</a><span class="sep">•</span><a href="https://www.kaggle.com/theamirbaram" rel="me">Kaggle</a><span class="sep">•</span><a href="https://huggingface.co/theamirbaram" rel="me">Hugging Face</a><span class="sep">•</span><a href="https://orcid.org/0009-0007-6904-6348" rel="me">ORCID</a><span class="sep">•</span><a href="https://www.researchgate.net/profile/Amir-Baram" rel="me">ResearchGate</a><span class="sep">•</span><a href="https://www.youtube.com/@theamirbaram" rel="me">YouTube</a></p>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">© ۲۰۲۶ امیرمحمد برم · <span class="en" lang="en">Amir M. Baram</span> · <a href="../" hreflang="en" lang="en" class="en">English version</a></div>
+<footer class="site-footer">
+  <div class="wrap">© ۲۰۲۶ امیرمحمد برم · <span class="en" lang="en">Amir M. Baram</span> · <a href="/" hreflang="en" lang="en" class="en">English version</a></div>
 </footer>
-
-<script>
-(function(){
-  var nav=document.querySelector('nav');
-  var links=Array.prototype.slice.call(document.querySelectorAll('nav a.s'));
-  var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
-  function update(){
-    var edge=nav.offsetHeight+28, idx=-1;
-    for(var i=0;i<secs.length;i++){ if(secs[i]&&secs[i].getBoundingClientRect().top<=edge) idx=i; }
-    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-8) idx=secs.length-1;
-    for(var j=0;j<links.length;j++){
-      var on=(j===idx); links[j].classList.toggle('active',on);
-      if(on) links[j].setAttribute('aria-current','true'); else links[j].removeAttribute('aria-current');
-    }
-  }
-  var queued=false;
-  function onScroll(){ if(queued) return; queued=true; requestAnimationFrame(function(){queued=false;update();}); }
-  window.addEventListener('scroll',onScroll,{passive:true});
-  window.addEventListener('resize',onScroll);
-  update();
-})();
-</script>
+<script src="/assets/site.js"></script>
 </body>
 </html>
