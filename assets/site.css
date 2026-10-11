@@ -4,6 +4,16 @@
    near-black text, regular-weight menu. Text fills the content column, which grows with the
    window up to --wrap (Amir, 11 Oct: text should widen with the window); only a single post keeps
    a reading measure. */
+/* Fonts are served from this site (assets/fonts/), so phones show the same type as a
+   laptop with B Nazanin installed: Lato for Latin, B Nazanin for Persian. */
+@font-face{font-family:"Lato";font-weight:300;font-display:swap;src:url(fonts/lato-300-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:"Lato";font-weight:300;font-display:swap;src:url(fonts/lato-300-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Lato";font-weight:400;font-display:swap;src:url(fonts/lato-400-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:"Lato";font-weight:400;font-display:swap;src:url(fonts/lato-400-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Lato";font-weight:700;font-display:swap;src:url(fonts/lato-700-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:"Lato";font-weight:700;font-display:swap;src:url(fonts/lato-700-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"B Nazanin Web";font-weight:400;font-display:swap;src:url(fonts/bnazanin-400.woff2) format("woff2")}
+@font-face{font-family:"B Nazanin Web";font-weight:700;font-display:swap;src:url(fonts/bnazanin-700.woff2) format("woff2")}
 :root{
   /* Amir's palette ج (control vault, _assets/figure-palette.md): Khatam blue + crimson */
   --blue:#1B3683;        /* titles, headings, links, news dates */
@@ -12,15 +22,12 @@
   --ink:#1F2940; --ink-2:#2E3A55; --muted:#5A6377;   /* body text: palette navy, darkened */
   --line:#E1E5EF; --line-grey:#CDD3E4;
   --f-en:"Lato",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
-  --f-fa:"B Nazanin","BNazanin","Vazirmatn",Tahoma,serif;
+  --f-fa:"B Nazanin Web","B Nazanin","Lato",Tahoma,serif;
   --wrap:960px;
-  /* Persian sizes are set for B Nazanin. Visitors without it get Vazirmatn, which looks
-     about a fifth larger at the same size, so their sizes are scaled down; the script in
-     each page's head adds class "bn" to <html> when B Nazanin is installed. */
-  --fs:.83; --fa-lh:1.9;
+  /* Persian sizes are set for B Nazanin, which every visitor now gets from the site. */
+  --fs:1; --fa-lh:2.05;
   --measure:33em;        /* ~75 characters of Lato: used only for a single post */
 }
-html.bn{--fs:1;--fa-lh:2.05}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:#fff;color:var(--ink);font:400 17px/1.7 var(--f-en)}
