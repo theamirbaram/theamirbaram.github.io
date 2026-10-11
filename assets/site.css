@@ -62,11 +62,9 @@ html[lang="fa"] .menu a{font:400 19px/1 var(--f-fa)}
 .page-title h1::after{content:"";display:block;width:48px;height:3px;background:var(--accent);margin:16px auto 6px}
 .page-title .fa-name{font:600 30px/1.5 var(--f-fa);color:var(--ink-2);margin:10px 0 0}
 .page-title .lat{font:300 24px/1.4 var(--f-en);color:var(--ink-2);margin:6px 0 0;direction:ltr;unicode-bidi:isolate}
-.page-title .aka{font-size:15px;color:var(--muted);margin:6px 0 0}
 .page-title .sub{max-width:62ch;margin:14px auto 0;color:var(--ink-2)}
 .page-title .dots{margin:16px auto 0;max-width:70ch}
 html[lang="fa"] .page-title h1{font:600 clamp(40px,6vw,56px)/1.35 var(--f-fa)}
-html[lang="fa"] .page-title .aka{font-size:17px;line-height:1.8}
 
 /* ---- bands ---- */
 .band{padding:56px 0}
