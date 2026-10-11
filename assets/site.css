@@ -85,8 +85,11 @@ html[lang="fa"] .menu a[aria-current="page"]{font-weight:700}
 .lang summary::-webkit-details-marker{display:none}
 .lang summary svg{display:block;width:22px;height:22px}
 .lang summary:hover,.lang[open] summary{color:var(--accent)}
-.lang ul{position:absolute;top:calc(100% + 4px);inset-inline-end:0;z-index:20;margin:0;padding:6px 0;list-style:none;min-width:150px;background:var(--bg);border:1px solid var(--line-grey);box-shadow:0 8px 20px var(--shadow-soft)}
-.lang li a{display:block;padding:8px 18px;color:var(--ink);text-decoration:none;font:400 16px/1.5 var(--f-en)}
+/* focus ring only for keyboard use, in the accent colour */
+.lang summary:focus:not(:focus-visible){outline:none}
+.lang summary:focus-visible,.theme-btn:focus-visible,.menu-btn:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:4px}
+.lang ul{position:absolute;top:calc(100% + 4px);inset-inline-end:0;z-index:20;margin:0;padding:4px 0;list-style:none;width:max-content;text-align:center;background:var(--bg);border:1px solid var(--line-grey);box-shadow:0 8px 20px var(--shadow-soft)}
+.lang li a{display:block;padding:6px 16px;color:var(--ink);text-decoration:none;font:400 16px/1.5 var(--f-en)}
 .lang li a:lang(fa){font:400 calc(19px*var(--fs))/1.5 var(--f-fa)}
 .lang li a:hover{background:var(--grey);color:var(--ink)}
 .lang li a[aria-current]{color:var(--accent);font-weight:700}
