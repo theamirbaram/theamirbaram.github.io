@@ -1,7 +1,9 @@
 /* amirmbaram.com - one stylesheet for every page, English and Persian.
    Layout after lhpedersen.com: white header, centred page title, white / tinted / grey
    full-width bands. Tuned for easy reading (11 Oct 2026): dark text on light grounds only,
-   lines of about 75 characters, near-black text, regular-weight menu. */
+   near-black text, regular-weight menu. Text fills the content column, which grows with the
+   window up to --wrap (Amir, 11 Oct: text should widen with the window); only a single post keeps
+   a reading measure. */
 :root{
   /* Amir's palette ج (control vault, _assets/figure-palette.md): Khatam blue + crimson */
   --blue:#1B3683;        /* titles, headings, links, news dates */
@@ -16,7 +18,7 @@
      about a fifth larger at the same size, so their sizes are scaled down; the script in
      each page's head adds class "bn" to <html> when B Nazanin is installed. */
   --fs:.83; --fa-lh:1.9;
-  --measure:33em;        /* ~75 characters of Lato */
+  --measure:33em;        /* ~75 characters of Lato: used only for a single post */
 }
 html.bn{--fs:1;--fa-lh:2.05}
 *{box-sizing:border-box}
@@ -27,7 +29,7 @@ html[lang="fa"]{--measure:27em}   /* ~80 Persian characters */
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
 a{color:var(--blue);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 a:hover{color:var(--accent)}
-p{margin:0 0 14px;max-width:var(--measure)}
+p{margin:0 0 14px}
 img{max-width:100%}
 .fa-in{font-family:var(--f-fa);font-size:calc(1.22em*var(--fs));line-height:1;unicode-bidi:isolate}
 .en{font-family:var(--f-en);font-size:calc(.8em/var(--fs));direction:ltr;unicode-bidi:isolate}   /* Latin words inside Persian text */
@@ -82,15 +84,18 @@ html[lang="fa"] h2{font:600 calc(31px*var(--fs))/1.5 var(--f-fa)}
 .bio .lead{font-size:18.5px;color:var(--ink-2)}
 html[lang="fa"] .bio .lead{font-size:calc(22px*var(--fs))}
 
+/* home: contact, centred (both languages) */
+#contact{text-align:center}
+#contact .dots{justify-content:center}
+
 /* home: news */
-.news{list-style:none;margin:0;padding:0;max-width:calc(var(--measure) + 148px)}
+.news{list-style:none;margin:0;padding:0}
 .news li{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:8px 0}
 .news .d{font-weight:700;color:var(--blue);white-space:nowrap}
-html[lang="fa"] .news{max-width:calc(var(--measure) + 168px)}
 html[lang="fa"] .news li{grid-template-columns:150px 1fr}
 
 /* links separated by dots: underlined only on hover */
-.dots{display:flex;flex-wrap:wrap;align-items:baseline;row-gap:2px;max-width:none}
+.dots{display:flex;flex-wrap:wrap;align-items:baseline;row-gap:2px}
 .page-title .dots{justify-content:center}
 .dots a{white-space:nowrap;text-decoration:none}
 .dots a:hover{text-decoration:underline}
@@ -101,11 +106,11 @@ html[lang="fa"] .dots a{font:400 16.5px/1.7 var(--f-en);unicode-bidi:isolate}
 .work h3{font:700 18.5px/1.5 var(--f-en)}
 .work .meta{color:var(--muted);margin:2px 0 10px}
 html[lang="fa"] .work h3{font:700 calc(23px*var(--fs))/1.8 var(--f-fa)}
-.cols{columns:2;column-gap:48px;margin:0;padding-inline-start:20px;max-width:calc(var(--measure) + 120px)}
+.cols{columns:2;column-gap:48px;margin:0;padding-inline-start:20px}
 .cols li{break-inside:avoid;padding:2px 0}
 
 /* cv rows */
-.rows{list-style:none;margin:0;padding:0;max-width:calc(var(--measure) + 204px)}
+.rows{list-style:none;margin:0;padding:0}
 .rows li{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:14px 0;border-top:1px solid var(--line)}
 .band.grey .rows li{border-top-color:var(--line-grey)}
 .rows li:first-child{border-top:0;padding-top:0}
@@ -113,13 +118,13 @@ html[lang="fa"] .work h3{font:700 calc(23px*var(--fs))/1.8 var(--f-fa)}
 .rows h3{font:700 17px/1.6 var(--f-en)}
 .rows .where{color:var(--ink-2)}
 html[lang="fa"] .rows h3{font:700 calc(21px*var(--fs))/1.8 var(--f-fa)}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:calc(var(--measure) + 204px)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:48px}
 .grid2 h3{font:700 17px/1.6 var(--f-en);color:var(--ink-2);margin:0 0 6px}
 .grid2 ul{margin:0;padding-inline-start:20px}
 html[lang="fa"] .grid2 h3{font:700 calc(21px*var(--fs))/1.8 var(--f-fa)}
 
 /* writing */
-.posts{list-style:none;margin:0;padding:0;max-width:calc(var(--measure) + 148px)}
+.posts{list-style:none;margin:0;padding:0}
 .posts li{display:grid;grid-template-columns:130px 1fr;gap:18px;padding:14px 0;border-top:1px solid var(--line-grey)}
 .posts li:first-child{border-top:0;padding-top:0}
 .posts .d{color:var(--muted)}
