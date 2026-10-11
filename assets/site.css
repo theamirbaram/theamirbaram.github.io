@@ -33,20 +33,17 @@ img{max-width:100%}
 /* ---- header ---- */
 .site-header{position:sticky;top:0;z-index:10;background:#fff;transition:background-color .2s ease,box-shadow .2s ease}
 .site-header .wrap{max-width:1240px;display:flex;align-items:center;gap:8px;min-height:64px}
-.brand{font:300 21px/1.2 var(--f-en);color:var(--ink);text-decoration:none;margin-inline-end:auto;white-space:nowrap}
-.brand:hover{color:var(--ink)}
 .menu{display:flex;align-items:center;flex-wrap:wrap;gap:2px}
 .menu a{font:300 16px/1 var(--f-en);color:var(--ink);opacity:.72;text-decoration:none;padding:12px 12px;white-space:nowrap;transition:opacity .15s ease,color .15s ease}
 .menu a:hover{opacity:1;color:var(--ink)}
 .menu a[aria-current="page"]{opacity:1;font-weight:400;color:var(--accent)}
 .menu a.lang{opacity:1;color:var(--blue);font:500 18px/1 var(--f-fa);padding-inline-start:18px}
 .site-header.scrolled{background:var(--dark);box-shadow:0 1px 8px rgba(0,0,0,.28)}
-.scrolled .brand,.scrolled .menu a,.scrolled .menu a:hover{color:#fff}
+.scrolled .menu a,.scrolled .menu a:hover{color:#fff}
 .scrolled .menu a[aria-current="page"],.scrolled .menu a.lang{color:var(--on-dark)}
 .menu-btn{display:none;background:none;border:0;padding:10px;margin-inline-start:-10px;cursor:pointer;color:inherit}
 .menu-btn svg{display:block;width:24px;height:24px;stroke:currentColor}
 .scrolled .menu-btn{color:#fff}
-html[lang="fa"] .brand{font:600 24px/1.3 var(--f-fa)}
 html[lang="fa"] .menu a{font:400 19px/1 var(--f-fa)}
 html[lang="fa"] .menu a.lang{font:400 15px/1 var(--f-en)}
 
@@ -147,9 +144,8 @@ html[lang="fa"] .site-footer{font-size:17px}
   html.js .site-header.open .menu a{padding:12px 4px}
   html.js .site-header.open .menu a.lang{padding-inline-start:4px}
   html.js .site-header.open{background:var(--dark)}
-  html.js .site-header.open .brand,html.js .site-header.open .menu a,html.js .site-header.open .menu-btn{color:#fff}
+  html.js .site-header.open .menu a,html.js .site-header.open .menu-btn{color:#fff}
   html.js .site-header.open .menu a[aria-current="page"],html.js .site-header.open .menu a.lang{color:var(--on-dark)}
-  html.js .brand{margin-inline-end:auto}
   .page-title{padding:40px 0 34px}
   .band{padding:40px 0}
   .bio{grid-template-columns:1fr;gap:24px}
