@@ -36,7 +36,7 @@ img{max-width:100%}
 
 /* ---- header: stays white, with a clear rule under it and a soft shadow once the page scrolls ---- */
 .site-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:2px solid var(--line-grey);transition:box-shadow .2s ease}
-.site-header.scrolled{box-shadow:0 6px 16px rgba(27,54,131,.12)}
+.site-header.scrolled{box-shadow:0 6px 18px rgba(27,54,131,.28)}
 .site-header .wrap{max-width:1240px;display:flex;align-items:center;gap:8px;min-height:64px}
 .menu{display:flex;align-items:center;flex-wrap:wrap;gap:2px}
 .menu a{font:400 16px/1 var(--f-en);color:var(--ink-2);text-decoration:none;padding:12px 12px;white-space:nowrap;transition:color .15s ease}
@@ -149,7 +149,7 @@ html[lang="fa"] .site-footer{font-size:calc(17px*var(--fs))}
   .menu::-webkit-scrollbar{display:none}
   html.js .menu-btn{display:block}
   html.js .menu{display:none}
-  html.js .site-header.open{box-shadow:0 6px 16px rgba(27,54,131,.12)}
+  html.js .site-header.open{box-shadow:0 6px 18px rgba(27,54,131,.28)}
   html.js .site-header.open .menu{display:flex;flex-direction:column;align-items:stretch;margin:0 0 10px;overflow:visible}
   html.js .site-header.open .menu a{padding:12px 4px;border-top:1px solid var(--line)}
   .page-title{padding:40px 0 34px}
