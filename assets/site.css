@@ -71,7 +71,7 @@ html[lang="fa"] .page-title h1{font:600 clamp(calc(40px*var(--fs)),calc(6vw*var(
 /* ---- bands ---- */
 .band{padding:56px 0}
 .band.grey{background:var(--grey)}
-.band.tint{background:var(--grey);border-top:4px solid var(--blue)}   /* the News band: light, with a Khatam-blue edge */
+.band.tint{background:var(--grey);border-top:8px solid var(--blue)}   /* the News band: light, with a Khatam-blue edge */
 h2{font:400 26px/1.35 var(--f-en);color:var(--blue);margin:0 0 20px}
 h3{margin:0}
 html[lang="fa"] h2{font:600 calc(31px*var(--fs))/1.5 var(--f-fa)}
