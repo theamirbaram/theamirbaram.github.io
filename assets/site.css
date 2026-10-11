@@ -34,9 +34,9 @@ img{max-width:100%}
 .skip{position:absolute;inset-inline-start:-999px;top:8px;background:#fff;padding:8px 12px;z-index:20}
 .skip:focus{inset-inline-start:8px}
 
-/* ---- header: stays white; a thin rule appears once the page scrolls ---- */
-.site-header{position:sticky;top:0;z-index:10;background:#fff;transition:box-shadow .2s ease}
-.site-header.scrolled{box-shadow:0 1px 0 var(--line),0 4px 14px rgba(27,54,131,.06)}
+/* ---- header: stays white, with a clear rule under it and a soft shadow once the page scrolls ---- */
+.site-header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:2px solid var(--line-grey);transition:box-shadow .2s ease}
+.site-header.scrolled{box-shadow:0 6px 16px rgba(27,54,131,.12)}
 .site-header .wrap{max-width:1240px;display:flex;align-items:center;gap:8px;min-height:64px}
 .menu{display:flex;align-items:center;flex-wrap:wrap;gap:2px}
 .menu a{font:400 16px/1 var(--f-en);color:var(--ink-2);text-decoration:none;padding:12px 12px;white-space:nowrap;transition:color .15s ease}
@@ -71,7 +71,7 @@ html[lang="fa"] .page-title h1{font:600 clamp(calc(40px*var(--fs)),calc(6vw*var(
 /* ---- bands ---- */
 .band{padding:56px 0}
 .band.grey{background:var(--grey)}
-.band.tint{background:var(--grey);border-top:8px solid var(--blue)}   /* the News band: light, with a Khatam-blue edge */
+.band.tint{background:var(--grey);border-top:4px solid var(--blue)}   /* the News band: light, with a Khatam-blue edge */
 h2{font:400 26px/1.35 var(--f-en);color:var(--blue);margin:0 0 20px}
 h3{margin:0}
 html[lang="fa"] h2{font:600 calc(31px*var(--fs))/1.5 var(--f-fa)}
@@ -149,7 +149,7 @@ html[lang="fa"] .site-footer{font-size:calc(17px*var(--fs))}
   .menu::-webkit-scrollbar{display:none}
   html.js .menu-btn{display:block}
   html.js .menu{display:none}
-  html.js .site-header.open{box-shadow:0 1px 0 var(--line),0 4px 14px rgba(27,54,131,.06)}
+  html.js .site-header.open{box-shadow:0 6px 16px rgba(27,54,131,.12)}
   html.js .site-header.open .menu{display:flex;flex-direction:column;align-items:stretch;margin:0 0 10px;overflow:visible}
   html.js .site-header.open .menu a{padding:12px 4px;border-top:1px solid var(--line)}
   .page-title{padding:40px 0 34px}
