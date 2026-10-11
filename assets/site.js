@@ -11,4 +11,10 @@
     var open=h.classList.toggle('open');
     btn.setAttribute('aria-expanded', open?'true':'false');
   });
+  /* language drop-down: close on a click outside or on Escape */
+  var lang=h.querySelector('details.lang');
+  if(lang){
+    document.addEventListener('click', function(e){ if(lang.open && !lang.contains(e.target)) lang.open=false; });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && lang.open){ lang.open=false; lang.querySelector('summary').focus(); } });
+  }
 })();

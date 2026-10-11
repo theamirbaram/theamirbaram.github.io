@@ -37,12 +37,20 @@ img{max-width:100%}
 .menu a{font:300 16px/1 var(--f-en);color:var(--ink);opacity:.72;text-decoration:none;padding:12px 12px;white-space:nowrap;transition:opacity .15s ease,color .15s ease}
 .menu a:hover{opacity:1;color:var(--ink)}
 .menu a[aria-current="page"]{opacity:1;font-weight:400;color:var(--accent)}
-.lang{margin-inline-start:auto;display:flex;align-items:center;padding:10px;color:var(--blue);transition:color .15s ease}
-.lang svg{display:block;width:22px;height:22px}
-.lang:hover{color:var(--accent)}
+/* language switch: globe with a small drop-down (English / فارسی) */
+.lang{margin-inline-start:auto;position:relative}
+.lang summary{list-style:none;cursor:pointer;display:flex;align-items:center;padding:10px;color:var(--blue);transition:color .15s ease}
+.lang summary::-webkit-details-marker{display:none}
+.lang summary svg{display:block;width:22px;height:22px}
+.lang summary:hover,.lang[open] summary{color:var(--accent)}
+.lang ul{position:absolute;top:calc(100% + 4px);inset-inline-end:0;z-index:20;margin:0;padding:6px 0;list-style:none;min-width:150px;background:#fff;border:1px solid var(--line-grey);box-shadow:0 8px 20px rgba(27,54,131,.14)}
+.lang li a{display:block;padding:8px 18px;color:var(--ink);text-decoration:none;font:400 16px/1.5 var(--f-en)}
+.lang li a:lang(fa){font:400 19px/1.5 var(--f-fa)}
+.lang li a:hover{background:var(--grey);color:var(--ink)}
+.lang li a[aria-current]{color:var(--accent);font-weight:700}
 .site-header.scrolled{background:var(--dark);box-shadow:0 1px 8px rgba(0,0,0,.28)}
 .scrolled .menu a,.scrolled .menu a:hover{color:#fff}
-.scrolled .menu a[aria-current="page"],.scrolled .lang{color:var(--on-dark)}
+.scrolled .menu a[aria-current="page"],.scrolled .lang summary{color:var(--on-dark)}
 .menu-btn{display:none;background:none;border:0;padding:10px;margin-inline-start:-10px;cursor:pointer;color:inherit}
 .menu-btn svg{display:block;width:24px;height:24px;stroke:currentColor}
 .scrolled .menu-btn{color:#fff}
@@ -146,7 +154,7 @@ html[lang="fa"] .site-footer{font-size:17px}
   html.js .site-header.open .menu a{padding:12px 4px}
   html.js .site-header.open{background:var(--dark)}
   html.js .site-header.open .menu a,html.js .site-header.open .menu-btn{color:#fff}
-  html.js .site-header.open .menu a[aria-current="page"],html.js .site-header.open .lang{color:var(--on-dark)}
+  html.js .site-header.open .menu a[aria-current="page"],html.js .site-header.open .lang summary{color:var(--on-dark)}
   .page-title{padding:40px 0 34px}
   .band{padding:40px 0}
   .bio{grid-template-columns:1fr;gap:24px}
