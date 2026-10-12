@@ -102,6 +102,8 @@ html[lang="fa"] .menu a[aria-current="page"]{font-weight:700}
 .page-title h1::after{content:"";display:block;width:100%;height:3px;background:var(--accent);margin:14px 0 6px}  /* as wide as the title */
 .page-title .fa-name{font:600 calc(30px*var(--fs))/1.5 var(--f-fa);color:var(--ink-2);margin:10px auto 0}
 .page-title .lat{font:300 24px/1.4 var(--f-en);color:var(--ink-2);margin:6px auto 0;direction:ltr;unicode-bidi:isolate}
+.page-title .role{font:400 16px/1.6 var(--f-en);letter-spacing:.02em;color:var(--muted);max-width:62ch;margin:14px auto 0}   /* role line under the name, both languages */
+html[lang="fa"] .page-title .role{font:400 calc(19px*var(--fs))/1.8 var(--f-fa);letter-spacing:0}
 .page-title .sub{max-width:62ch;margin:14px auto 0;color:var(--ink-2)}
 .page-title .dots{margin:16px auto 0;max-width:70ch}
 html[lang="fa"] .page-title h1{font:600 clamp(calc(40px*var(--fs)),calc(6vw*var(--fs)),calc(56px*var(--fs)))/1.35 var(--f-fa)}
