@@ -123,7 +123,7 @@ html[lang="fa"] h2{font:600 calc(31px*var(--fs))/1.5 var(--f-fa)}
 .bio .lead{font-size:18.5px;color:var(--ink-2)}
 html[lang="fa"] .bio .lead{font-size:calc(22px*var(--fs))}
 
-/* home: "Who is ..." facts, a plain list that search and answer engines can quote (both languages) */
+/* home: "At a glance" facts, a plain list that search and answer engines can quote (both languages) */
 .band.grey + .band.grey{border-top:1px solid var(--line-grey)}   /* facts and contact are both grey: a rule between them */
 #facts .lead{font-size:18.5px;color:var(--ink-2)}
 html[lang="fa"] #facts .lead{font-size:calc(22px*var(--fs))}
