@@ -1,3 +1,23 @@
+# robots.txt - amirmbaram.com
+# Every page here is public. Nothing on the site is blocked.
+
+# Search engines and AI answer engines: they find this site, read it when someone asks
+# about Amir M. Baram, and link back to it. Named here so the welcome is explicit.
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+User-agent: DuckAssistBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Allow: /
+
+# Everyone else - including the AI training crawlers (GPTBot, ClaudeBot, Google-Extended,
+# Applebot-Extended, CCBot) - is allowed, as before.
 User-agent: *
 Allow: /
 

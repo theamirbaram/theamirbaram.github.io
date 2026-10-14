@@ -31,30 +31,48 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://amirmbaram.com/#person",
-  "name": "Amir M. Baram",
-  "alternateName": ["امیرمحمد برم", "امیر محمد برم", "امیر برم", "Amir Mohammad Baram", "AmirMohammad Baram", "Amir Baram"],
-  "givenName": "Amir Mohammad",
-  "familyName": "Baram",
-  "url": "https://amirmbaram.com/",
-  "identifier": {"@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-6904-6348"},
-  "email": "mailto:theamirbaram@gmail.com",
-  "image": "https://amirmbaram.com/amir-m-baram.jpg",
-  "jobTitle": "Quantitative Researcher",
-  "affiliation": {"@type": "CollegeOrUniversity", "name": "Khatam University", "alternateName": "دانشگاه خاتم", "url": "https://khatam.ac.ir/"},
-  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Babol Noshirvani University of Technology", "alternateName": "دانشگاه صنعتی نوشیروانی بابل", "url": "https://www.nit.ac.ir/"},
-  "homeLocation": {"@type": "Place", "name": "Dubai, United Arab Emirates"},
-  "knowsLanguage": ["fa", "en"],
-  "knowsAbout": ["Quantitative finance", "Financial risk management", "Hedging", "Portfolio optimization", "Derivatives and options markets", "Cryptocurrency markets", "Machine learning", "Time-series forecasting", "Transformer models", "Econometrics", "Python"],
-  "sameAs": [
-    "https://www.linkedin.com/in/amirmbaram/",
-    "https://github.com/theamirbaram",
-    "https://www.kaggle.com/theamirbaram",
-    "https://huggingface.co/theamirbaram",
-    "https://www.researchgate.net/profile/Amir-Baram",
-    "https://www.youtube.com/@theamirbaram",
-    "https://orcid.org/0009-0007-6904-6348"
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://amirmbaram.com/fa/#profilepage",
+      "url": "https://amirmbaram.com/fa/",
+      "name": "امیرمحمد برم (امیر محمد برم)",
+      "inLanguage": "fa",
+      "isPartOf": {"@id": "https://amirmbaram.com/#website"},
+      "mainEntity": {"@id": "https://amirmbaram.com/#person"},
+      "dateCreated": "2026-10-10",
+      "dateModified": "2026-10-14"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://amirmbaram.com/#person",
+      "name": "Amir M. Baram",
+      "alternateName": ["امیرمحمد برم", "امیر محمد برم", "امیر برم", "Amir Mohammad Baram", "AmirMohammad Baram", "Amir Baram"],
+      "givenName": "Amir Mohammad",
+      "familyName": "Baram",
+      "description": "پژوهشگر کمّی و دانشجوی کارشناسی ارشد مالی دانشگاه خاتم، ساکن دبی. پایان‌نامه‌ی کارشناسی ارشد او قیمت بیت‌کوین و اتریوم را با مدل Transformer پیش‌بینی می‌کند؛ مدلی که بازار نقدی، آتی و اختیار معامله را هم‌زمان می‌خواند.",
+      "disambiguatingDescription": "امیرمحمد برم (Amir M. Baram): پژوهشگر کمّی و دانشجوی کارشناسی ارشد مالی دانشگاه خاتم، ساکن دبی؛ پیش‌بینی بازارهای رمزارز با یادگیری ماشین و مدیریت ریسک مالی.",
+      "url": "https://amirmbaram.com/",
+      "mainEntityOfPage": {"@id": "https://amirmbaram.com/fa/#profilepage"},
+      "identifier": {"@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-6904-6348", "url": "https://orcid.org/0009-0007-6904-6348"},
+      "email": "mailto:theamirbaram@gmail.com",
+      "image": "https://amirmbaram.com/amir-m-baram.jpg",
+      "jobTitle": "Quantitative Researcher",
+      "affiliation": {"@type": "CollegeOrUniversity", "name": "Khatam University", "alternateName": "دانشگاه خاتم", "url": "https://khatam.ac.ir/"},
+      "alumniOf": {"@type": "CollegeOrUniversity", "name": "Babol Noshirvani University of Technology", "alternateName": "دانشگاه صنعتی نوشیروانی بابل", "url": "https://www.nit.ac.ir/"},
+      "homeLocation": {"@type": "Place", "name": "Dubai, United Arab Emirates"},
+      "knowsLanguage": ["fa", "en"],
+      "knowsAbout": ["Quantitative finance", "Financial risk management", "Hedging", "Portfolio optimization", "Derivatives and options markets", "Cryptocurrency markets", "Energy markets", "Machine learning", "Time-series forecasting", "Transformer models", "Econometrics", "Python"],
+      "sameAs": [
+        "https://www.linkedin.com/in/amirmbaram/",
+        "https://github.com/theamirbaram",
+        "https://www.kaggle.com/theamirbaram",
+        "https://huggingface.co/theamirbaram",
+        "https://www.researchgate.net/profile/Amir-Baram",
+        "https://www.youtube.com/@theamirbaram",
+        "https://orcid.org/0009-0007-6904-6348"
+      ]
+    }
   ]
 }
 </script>
@@ -119,6 +137,20 @@
       <h2 id="h-research">خلاصه‌ی پژوهش</h2>
       <p><b>پیش‌بینی قیمت بیت‌کوین و اتریوم با مدل <span class="en" lang="en">Transformer</span>.</b> مدل به‌جای تاریخچه‌ی قیمت به‌تنهایی، چند بازار را هم‌زمان می‌خواند: نقدی، آتی و اختیار معامله.</p>
       <p>و در پیرامون آن: مالی کمّی، بازارهای مشتقه و اختیار معامله، مدیریت ریسک و پوشش ریسک، بهینه‌سازی سبد دارایی، یادگیری ماشین برای سری‌های زمانی، و بازارهای رمزارز و انرژی. <a href="/fa/research/">صفحه‌ی پژوهش</a></p>
+    </div>
+  </section>
+
+  <section class="band grey" id="facts" aria-labelledby="h-facts">
+    <div class="wrap">
+      <h2 id="h-facts">امیرمحمد برم کیست؟</h2>
+      <p class="lead">امیرمحمد برم (<span class="en" lang="en">Amir M. Baram</span>) پژوهشگر کمّی و دانشجوی کارشناسی ارشد مالی دانشگاه خاتم در تهران است و در دبی زندگی می‌کند. پایان‌نامه‌ی کارشناسی ارشد او قیمت بیت‌کوین و اتریوم را با مدل <span class="en" lang="en">Transformer</span> پیش‌بینی می‌کند؛ مدلی که بازار نقدی، آتی و اختیار معامله را هم‌زمان می‌خواند.</p>
+      <dl class="facts">
+        <dt>نام کامل</dt><dd>امیرمحمد برم (امیر محمد برم)؛ به انگلیسی <span class="en" lang="en">Amir Mohammad Baram</span></dd>
+        <dt>تحصیلات</dt><dd>کارشناسی ارشد مالی، دانشگاه خاتم (۱۴۰۳ تاکنون)<br>کارشناسی مهندسی صنایع، دانشگاه صنعتی نوشیروانی بابل (۱۳۹۷ – ۱۴۰۲)</dd>
+        <dt>زمینه‌ی پژوهش</dt><dd>مالی کمّی، بازارهای مشتقه و اختیار معامله، مدیریت ریسک و پوشش ریسک، بهینه‌سازی سبد دارایی، یادگیری ماشین برای سری‌های زمانی</dd>
+        <dt>محل سکونت</dt><dd>دبی، امارات متحده‌ی عربی</dd>
+        <dt>شناسه‌ی <span class="en" lang="en">ORCID</span></dt><dd><a class="en" href="https://orcid.org/0009-0007-6904-6348">0009-0007-6904-6348</a></dd>
+      </dl>
     </div>
   </section>
 

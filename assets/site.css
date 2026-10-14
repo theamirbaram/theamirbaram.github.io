@@ -123,6 +123,16 @@ html[lang="fa"] h2{font:600 calc(31px*var(--fs))/1.5 var(--f-fa)}
 .bio .lead{font-size:18.5px;color:var(--ink-2)}
 html[lang="fa"] .bio .lead{font-size:calc(22px*var(--fs))}
 
+/* home: "Who is ..." facts, a plain list that search and answer engines can quote (both languages) */
+.band.grey + .band.grey{border-top:1px solid var(--line-grey)}   /* facts and contact are both grey: a rule between them */
+#facts .lead{font-size:18.5px;color:var(--ink-2)}
+html[lang="fa"] #facts .lead{font-size:calc(22px*var(--fs))}
+.facts{display:grid;grid-template-columns:150px 1fr;gap:8px 24px;margin:22px 0 0}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0}
+.facts .fa-in,.facts .en{white-space:nowrap}   /* a name in the other script stays on one line */
+html[lang="fa"] .facts{grid-template-columns:170px 1fr}
+
 /* home: contact, centred (both languages) */
 #contact{text-align:center}
 #contact .dots{justify-content:center}
@@ -207,4 +217,6 @@ html[lang="fa"] .site-footer{font-size:calc(17px*var(--fs))}
   .news li,.posts li,.rows li,html[lang="fa"] .news li{grid-template-columns:1fr;gap:0}
   .cols{columns:1}
   .grid2{grid-template-columns:1fr;gap:28px}
+  .facts,html[lang="fa"] .facts{grid-template-columns:1fr;gap:0}
+  .facts dd{margin-bottom:12px}
 }

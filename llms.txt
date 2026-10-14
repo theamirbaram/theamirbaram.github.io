@@ -1,0 +1,49 @@
+# Amir M. Baram (Amir Mohammad Baram · امیرمحمد برم)
+
+> Amir M. Baram is a quantitative researcher and MSc Finance student at Khatam University in Tehran, based in Dubai. His master's research forecasts Bitcoin and Ethereum prices with a Transformer model that reads the spot, futures and options markets together. amirmbaram.com is his personal website, in English and Persian.
+
+## Facts
+
+- Name: Amir M. Baram, short for Amir Mohammad Baram. In Persian: امیرمحمد برم (also written امیر محمد برم).
+- Role: MSc Finance student and quantitative researcher; machine learning for financial markets.
+- Education: MSc Finance, Khatam University, Tehran (September 2024 – present). BSc Industrial Engineering, Babol Noshirvani University of Technology (September 2018 – August 2023).
+- Experience: freelance financial-market analyst (January 2020 – September 2024); expert at the Technology Incubator of Babol Noshirvani University of Technology (seasonal, July 2022 – April 2025).
+- Research interests: quantitative finance; derivatives and options markets; risk management and hedging; portfolio optimization; machine learning for time series; crypto and energy markets.
+- Community: took part in the 10th Quant Circle at Sharif University of Technology (summer 2026), on hedging physical oil and energy trades.
+- Based in: Dubai, United Arab Emirates.
+- Languages: Persian (native), English (professional working proficiency).
+- ORCID iD: 0009-0007-6904-6348
+- Contact: theamirbaram@gmail.com, or a message on LinkedIn.
+
+## Pages
+
+- [Home](https://amirmbaram.com/): bio, news, research summary, facts, contact
+- [Research](https://amirmbaram.com/research/): master's thesis and research interests
+- [CV](https://amirmbaram.com/cv/): education, experience, skills and languages
+- [Writing](https://amirmbaram.com/writing/): longer pieces on quant finance, risk and machine learning
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/amirmbaram/)
+- [ORCID](https://orcid.org/0009-0007-6904-6348)
+- [GitHub](https://github.com/theamirbaram)
+- [Kaggle](https://www.kaggle.com/theamirbaram)
+- [Hugging Face](https://huggingface.co/theamirbaram)
+- [ResearchGate](https://www.researchgate.net/profile/Amir-Baram)
+- [YouTube](https://www.youtube.com/@theamirbaram)
+
+## فارسی
+
+امیرمحمد برم (Amir M. Baram) پژوهشگر کمّی و دانشجوی کارشناسی ارشد مالی دانشگاه خاتم در تهران است و در دبی زندگی می‌کند. پایان‌نامه‌ی کارشناسی ارشد او قیمت بیت‌کوین و اتریوم را با مدل Transformer پیش‌بینی می‌کند؛ مدلی که بازار نقدی، آتی و اختیار معامله را هم‌زمان می‌خواند.
+
+- نام: امیرمحمد برم (امیر محمد برم)؛ به انگلیسی Amir M. Baram یا Amir Mohammad Baram.
+- تحصیلات: کارشناسی ارشد مالی، دانشگاه خاتم، تهران (۱۴۰۳ تاکنون)؛ کارشناسی مهندسی صنایع، دانشگاه صنعتی نوشیروانی بابل (۱۳۹۷ – ۱۴۰۲).
+- سوابق: تحلیلگر مستقل بازارهای مالی (۱۳۹۸ – ۱۴۰۳)؛ کارشناس مرکز رشد فناوری دانشگاه صنعتی نوشیروانی بابل (فصلی، ۱۴۰۱ – ۱۴۰۴).
+- زمینه‌ی پژوهش: مالی کمّی، بازارهای مشتقه و اختیار معامله، مدیریت ریسک و پوشش ریسک، بهینه‌سازی سبد دارایی، یادگیری ماشین برای سری‌های زمانی، بازارهای رمزارز و انرژی.
+- محل سکونت: دبی، امارات متحده‌ی عربی.
+- شناسه‌ی ORCID: 0009-0007-6904-6348
+
+- [خانه](https://amirmbaram.com/fa/)
+- [پژوهش](https://amirmbaram.com/fa/research/)
+- [رزومه](https://amirmbaram.com/fa/cv/)
+- [نوشته‌ها](https://amirmbaram.com/fa/writing/)

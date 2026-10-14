@@ -31,30 +31,48 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://amirmbaram.com/#person",
-  "name": "Amir M. Baram",
-  "alternateName": ["Amir Mohammad Baram", "AmirMohammad Baram", "Amir Baram", "امیرمحمد برم", "امیر محمد برم", "امیر برم"],
-  "givenName": "Amir Mohammad",
-  "familyName": "Baram",
-  "url": "https://amirmbaram.com/",
-  "identifier": {"@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-6904-6348"},
-  "email": "mailto:theamirbaram@gmail.com",
-  "image": "https://amirmbaram.com/amir-m-baram.jpg",
-  "jobTitle": "Quantitative Researcher",
-  "affiliation": {"@type": "CollegeOrUniversity", "name": "Khatam University", "url": "https://khatam.ac.ir/"},
-  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Babol Noshirvani University of Technology", "url": "https://www.nit.ac.ir/"},
-  "homeLocation": {"@type": "Place", "name": "Dubai, United Arab Emirates"},
-  "knowsLanguage": ["fa", "en"],
-  "knowsAbout": ["Quantitative finance", "Financial risk management", "Hedging", "Portfolio optimization", "Derivatives and options markets", "Cryptocurrency markets", "Machine learning", "Time-series forecasting", "Transformer models", "Econometrics", "Python"],
-  "sameAs": [
-    "https://www.linkedin.com/in/amirmbaram/",
-    "https://github.com/theamirbaram",
-    "https://www.kaggle.com/theamirbaram",
-    "https://huggingface.co/theamirbaram",
-    "https://www.researchgate.net/profile/Amir-Baram",
-    "https://www.youtube.com/@theamirbaram",
-    "https://orcid.org/0009-0007-6904-6348"
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://amirmbaram.com/#profilepage",
+      "url": "https://amirmbaram.com/",
+      "name": "Amir M. Baram (Amir Mohammad Baram)",
+      "inLanguage": "en",
+      "isPartOf": {"@id": "https://amirmbaram.com/#website"},
+      "mainEntity": {"@id": "https://amirmbaram.com/#person"},
+      "dateCreated": "2026-10-10",
+      "dateModified": "2026-10-14"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://amirmbaram.com/#person",
+      "name": "Amir M. Baram",
+      "alternateName": ["Amir Mohammad Baram", "AmirMohammad Baram", "Amir Baram", "امیرمحمد برم", "امیر محمد برم", "امیر برم"],
+      "givenName": "Amir Mohammad",
+      "familyName": "Baram",
+      "description": "Quantitative researcher and MSc Finance student at Khatam University, based in Dubai. His master's research forecasts Bitcoin and Ethereum prices with a Transformer model that reads the spot, futures and options markets together.",
+      "disambiguatingDescription": "Amir M. Baram (Amir Mohammad Baram, امیرمحمد برم): quantitative researcher and MSc Finance student at Khatam University, based in Dubai; works on machine-learning forecasts for crypto markets and financial risk management.",
+      "url": "https://amirmbaram.com/",
+      "mainEntityOfPage": {"@id": "https://amirmbaram.com/#profilepage"},
+      "identifier": {"@type": "PropertyValue", "propertyID": "ORCID", "value": "0009-0007-6904-6348", "url": "https://orcid.org/0009-0007-6904-6348"},
+      "email": "mailto:theamirbaram@gmail.com",
+      "image": "https://amirmbaram.com/amir-m-baram.jpg",
+      "jobTitle": "Quantitative Researcher",
+      "affiliation": {"@type": "CollegeOrUniversity", "name": "Khatam University", "alternateName": "دانشگاه خاتم", "url": "https://khatam.ac.ir/"},
+      "alumniOf": {"@type": "CollegeOrUniversity", "name": "Babol Noshirvani University of Technology", "alternateName": "دانشگاه صنعتی نوشیروانی بابل", "url": "https://www.nit.ac.ir/"},
+      "homeLocation": {"@type": "Place", "name": "Dubai, United Arab Emirates"},
+      "knowsLanguage": ["fa", "en"],
+      "knowsAbout": ["Quantitative finance", "Financial risk management", "Hedging", "Portfolio optimization", "Derivatives and options markets", "Cryptocurrency markets", "Energy markets", "Machine learning", "Time-series forecasting", "Transformer models", "Econometrics", "Python"],
+      "sameAs": [
+        "https://www.linkedin.com/in/amirmbaram/",
+        "https://github.com/theamirbaram",
+        "https://www.kaggle.com/theamirbaram",
+        "https://huggingface.co/theamirbaram",
+        "https://www.researchgate.net/profile/Amir-Baram",
+        "https://www.youtube.com/@theamirbaram",
+        "https://orcid.org/0009-0007-6904-6348"
+      ]
+    }
   ]
 }
 </script>
@@ -131,6 +149,20 @@
       <h2 id="h-research">Research Summary</h2>
       <p><b>Forecasting Bitcoin and Ethereum prices with a Transformer model.</b> The model reads several markets at once — spot, futures and options — rather than the price history alone.</p>
       <p>Around it: quantitative finance, derivatives and options markets, risk management and hedging, portfolio optimization, machine learning for time series, and crypto and energy markets. <a href="/research/">Research page</a></p>
+    </div>
+  </section>
+
+  <section class="band grey" id="facts" aria-labelledby="h-facts">
+    <div class="wrap">
+      <h2 id="h-facts">Who is Amir M. Baram?</h2>
+      <p class="lead">Amir M. Baram (Amir Mohammad Baram) is a quantitative researcher and MSc Finance student at Khatam University in Tehran, based in Dubai. His master's research forecasts Bitcoin and Ethereum prices with a Transformer model that reads the spot, futures and options markets together.</p>
+      <dl class="facts">
+        <dt>Full name</dt><dd>Amir Mohammad Baram; in Persian <span class="fa-in" lang="fa" dir="rtl">امیرمحمد برم</span></dd>
+        <dt>Studies</dt><dd>MSc Finance, Khatam University (2024 – present)<br>BSc Industrial Engineering, Babol Noshirvani University of Technology (2018 – 2023)</dd>
+        <dt>Research</dt><dd>Quantitative finance, derivatives and options, risk management and hedging, portfolio optimization, machine learning for time series</dd>
+        <dt>Based in</dt><dd>Dubai, United Arab Emirates</dd>
+        <dt>ORCID iD</dt><dd><a href="https://orcid.org/0009-0007-6904-6348">0009-0007-6904-6348</a></dd>
+      </dl>
     </div>
   </section>
 
